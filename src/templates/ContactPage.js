@@ -17,8 +17,7 @@ export const ContactPageTemplate = ({
   featuredImage,
   address,
   phone,
-  email,
-  locations
+  email
 }) => (
   <main className="Contact">
     <PageHeader
@@ -61,8 +60,6 @@ export const ContactPageTemplate = ({
         </div>
       </div>
     </section>
-
-    <GoogleMap locations={locations} />
   </main>
 )
 
@@ -90,11 +87,6 @@ export const pageQuery = graphql`
         address
         phone
         email
-        locations {
-          mapLink
-          lat
-          lng
-        }
       }
     }
   }
