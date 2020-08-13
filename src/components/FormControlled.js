@@ -77,7 +77,7 @@ class Form extends Component {
       })
       .then(
         this.resetForm({
-          alert: 'Thanks for your enquiry, we will get back to you soon.'
+          alert: 'תודה על פנייתך. נחזור אליך בהקדם'
         })
       )
       .catch(err => {
