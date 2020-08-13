@@ -77,67 +77,46 @@ class Form extends React.Component {
               <input
                 className="Form--Input Form--InputText"
                 type="text"
-                placeholder="Firstname"
+                placeholder="שם פרטי"
                 name="firstname"
                 required
               />
-              <span>Firstname</span>
+              <span>שם פרטי</span>
             </label>
             <label className="Form--Label">
               <input
                 className="Form--Input Form--InputText"
                 type="text"
-                placeholder="Lastname"
+                placeholder="שם משפחה"
                 name="lastname"
                 required
               />
-              <span>Lastname</span>
+              <span>שם משפחה</span>
             </label>
           </div>
-          <fieldset>
-            <label className="Form--Label Form--Radio">
-              <input
-                className="Form--RadioInput"
-                type="radio"
-                name="gender"
-                value="male"
-                defaultChecked
-              />
-              <span>Male</span>
-            </label>
-            <label className="Form--Label Form--Radio">
-              <input
-                className="Form--RadioInput"
-                type="radio"
-                name="gender"
-                value="female"
-              />
-              <span>Female</span>
-            </label>
-          </fieldset>
           <label className="Form--Label">
             <input
               className="Form--Input Form--InputText"
               type="email"
-              placeholder="Email"
+              placeholder="אימייל"
               name="emailAddress"
               required
             />
-            <span>Email address</span>
+            <span>אימייל</span>
           </label>
           <label className="Form--Label has-arrow">
             <select
               className="Form--Input Form--Select"
               name="type"
-              defaultValue="Type of Enquiry"
+              defaultValue="סיבת הפניה"
               required
             >
               <option disabled hidden>
-                Type of Enquiry
+                סיבת הפניה
               </option>
-              <option>Need to know more</option>
-              <option>Found a bug</option>
-              <option>Want to say hello</option>
+              <option>כללי</option>
+              <option>מעוניין להתנדב</option>
+              <option>הזמנת הדרכה</option>
             </select>
           </label>
           <label className="Form--Label">
@@ -148,20 +127,8 @@ class Form extends React.Component {
               rows="10"
               required
             />
-            <span>Message</span>
+            <span>הודעה</span>
           </label>
-          <label className="Form--Label Form-Checkbox">
-            <input
-              className="Form--Input Form--Textarea Form--CheckboxInput"
-              name="newsletter"
-              type="checkbox"
-            />
-            <span>Get news updates</span>
-          </label>
-          <div
-            className="g-recaptcha"
-            data-sitekey="6LfKN3kUAAAAAGIM1CbXmaRZx3LIh_W2twn1tzkA"
-          />
           {!!subject && <input type="hidden" name="subject" value={subject} />}
           <input type="hidden" name="form-name" value={name} />
           <input
