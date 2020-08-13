@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import PageHeader from '../components/PageHeader'
 import FormSimpleAjax from '../components/FormSimpleAjax'
 import Content from '../components/Content'
-import GoogleMap from '../components/GoogleMap'
+// import GoogleMap from '../components/GoogleMap'
 import Layout from '../components/Layout'
 import './ContactPage.css'
 
@@ -52,6 +52,10 @@ export const ContactPageTemplate = ({
                 <Mail /> {email}
               </a>
             )}
+            <a className="Contact--Details--Item" href="https://www.facebook.com/Foodallergy.il/">
+              <img src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=32&h=32"></img>
+                דף הפייסבוק של עמותת יהל
+            </a>
           </div>
         </div>
 
@@ -84,7 +88,6 @@ export const pageQuery = graphql`
         template
         subtitle
         featuredImage
-        address
         phone
         email
       }

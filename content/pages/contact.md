@@ -5,8 +5,6 @@ title: נשמח להיות איתך בקשר
 featuredImage: 'https://ucarecdn.com/e22a858a-b420-47af-99f6-ed54b6860333/'
 subtitle: |-
   אנא עזרו לנו לגדול והצטרפו אלינו לדף הפייסבוק 
-
-  ![](https://ucarecdn.com/fe3ba196-6422-47b5-9758-ee8e78153dd4/)
 phone: 054-4671019
 email: info@allergyisrael.org.il
 address: ''
