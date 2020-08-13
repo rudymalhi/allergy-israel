@@ -13,7 +13,7 @@ export default ({ pageCount }) => {
           <input
             type="text"
             value={search.s || ''}
-            placeholder="Search..."
+            placeholder="חיפוש..."
             onChange={e => {
               let search = {}
               search.s = e.target.value

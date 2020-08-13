@@ -3,17 +3,9 @@ import './Footer.css'
 
 export default () => (
   <div>
-    <h2 className="taCenter">
-      Follow us{' '}
-      <a href="https://instagram.com/thrivegoldcoast/">@thrivegoldcoast</a>
-    </h2>
-    <br />
     <footer className="footer">
       <div className="container taCenter">
-        <span>
-          © Copyright {new Date().getFullYear()} All rights reserved. Crafted by{' '}
-          <a href="https://thriveweb.com.au/">Thrive</a>.
-        </span>
+        <span>עמותת יהל 054-4671019</span><a class="social-link" href="https://www.facebook.com/Foodallergy.il/"><img src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&amp;h=512"></img></a>
       </div>
     </footer>
   </div>

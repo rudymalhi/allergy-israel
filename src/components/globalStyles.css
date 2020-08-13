@@ -34,6 +34,7 @@ html {
 }
 
 body {
+  direction: rtl;
   font-family: var(--font-system);
   min-height: 100%;
   position: relative;

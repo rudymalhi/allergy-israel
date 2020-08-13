@@ -10,7 +10,7 @@
 .Nav--Container {
   display: flex;
   align-items: center;
-  height: 6rem;
+  height: 8rem;
 }
 
 .Nav--Links {
@@ -25,7 +25,7 @@
 }
 
 .Nav .Logo {
-  margin-right: 3rem;
+  margin-left: 3rem;
   position: relative;
 }
 
