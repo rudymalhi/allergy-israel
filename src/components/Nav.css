@@ -57,14 +57,14 @@
 }
 
 .Nav--GroupParent {
-  padding-right: 3rem;
+  padding-left: 3rem;
 }
 
 .Nav--GroupParent::after {
   content: '';
   position: absolute;
   top: calc(50% - 0.2rem);
-  right: 1rem;
+  left: 1.5rem;
   border-bottom: 2px solid var(--darkGrey);
   border-right: 2px solid var(--darkGrey);
   display: block;

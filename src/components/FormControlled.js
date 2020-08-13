@@ -176,7 +176,7 @@ class Form extends Component {
           value='Send'
           disabled={this.state.disabled ? 'disabled' : ''}
         >
-          Enquire
+          שלח
         </button>
       </form>
     )
