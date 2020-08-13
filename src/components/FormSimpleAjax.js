@@ -9,7 +9,6 @@ class Form extends React.Component {
   static defaultProps = {
     name: 'פניה לעמותה',
     subject: '', // optional subject of the notification email
-    action: '',
     successMessage: 'תודה על פנייתך. נחזור אליך בהקדם',
     errorMessage:
       'There is a problem, your message has not been sent, please try contacting us via email'
@@ -66,8 +65,7 @@ class Form extends React.Component {
           name={name}
           action={action}
           onSubmit={this.handleSubmit}
-          data-netlify=""
-          netlify-recaptcha=""
+          data-netlify="true"
         >
           {this.state.alert && (
             <div className="Form--Alert">{this.state.alert}</div>
