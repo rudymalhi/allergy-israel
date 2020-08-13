@@ -35,7 +35,7 @@
 
 .Form--Label > span {
   position: absolute;
-  left: 2rem;
+  right: 2rem;
   top: 1.5rem;
   transition: 0.3s ease all;
   opacity: 0.8;
@@ -89,7 +89,7 @@
 .Form--Label.has-arrow:after {
   content: '';
   position: absolute;
-  right: 2.5rem;
+  left: 2.5rem;
   top: 50%;
   border-right: 1px solid;
   border-bottom: 1px solid;

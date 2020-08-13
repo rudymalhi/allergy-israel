@@ -7,7 +7,7 @@ import './Form.css'
 
 class Form extends React.Component {
   static defaultProps = {
-    name: 'Simple Form Ajax',
+    name: 'פניה לעמותה',
     subject: '', // optional subject of the notification email
     action: '',
     successMessage: 'תודה על פנייתך. נחזור אליך בהקדם',
@@ -129,6 +129,7 @@ class Form extends React.Component {
             />
             <span>הודעה</span>
           </label>
+          <div data-netlify-recaptcha="true"></div>
           {!!subject && <input type="hidden" name="subject" value={subject} />}
           <input type="hidden" name="form-name" value={name} />
           <input
