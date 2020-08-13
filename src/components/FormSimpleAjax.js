@@ -53,7 +53,7 @@ class Form extends React.Component {
   }
 
   render() {
-    const { name, subject, action } = this.props
+    const { name, subject } = this.props
 
     return (
       <Fragment>
@@ -63,7 +63,6 @@ class Form extends React.Component {
         <form
           className="Form"
           name={name}
-          action={action}
           onSubmit={this.handleSubmit}
           data-netlify="true"
         >
