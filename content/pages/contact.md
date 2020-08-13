@@ -9,6 +9,7 @@ subtitle: |-
   ![](https://ucarecdn.com/fe3ba196-6422-47b5-9758-ee8e78153dd4/)
 phone: 054-4671019
 email: info@allergyisrael.org.il
+address:
 meta:
   description: This is a meta description.
   title: צור קשר
