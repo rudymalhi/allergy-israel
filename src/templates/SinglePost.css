@@ -3,7 +3,7 @@
 }
 
 .SinglePost--BackButton {
-  color: white;
+  color: black;
   position: relative;
   display: flex;
   align-items: center;
@@ -14,13 +14,13 @@
 
 .SinglePost--BackButton svg {
   transition: transform 0.2s ease-out;
-  transform: translateX(0);
+  transform: translateX(0) rotate(180deg);
   height: 1.2em;
 }
 
 .SinglePost--BackButton:hover svg,
 .SinglePost--BackButton:focus svg {
-  transform: translateX(-0.25em);
+  transform: translateX(-0.25em) rotate(180deg);
 }
 
 .SinglePost--Content {
