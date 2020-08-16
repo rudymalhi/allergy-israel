@@ -68,10 +68,10 @@ export const SinglePostTemplate = ({
             {accordion && (
               <Accordion items={accordion} />
             )}
-            {files && (
+          </div>
+          {files && (
               <FileGallery files={files} />
             )}
-          </div>
 
           <div className="SinglePost--Pagination">
             {prevPostURL && (
