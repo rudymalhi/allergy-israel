@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
+import Marked from 'react-markdown'
 import { graphql } from 'gatsby'
 
 import './FileGallery.css'
@@ -42,7 +43,7 @@ export default class FileGallery extends Component {
                   target="_blank"
                 >
                   {file.title && <h3 class="FileGallery--ItemTitle">{file.title}</h3>}
-                  {file.description && <p class="FileGallery--ItemDescription">{file.description}</p>}
+                  {file.description && <Marked source={file.description}/>}
                 </a>
               ))}
             </div>
