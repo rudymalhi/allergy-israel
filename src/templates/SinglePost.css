@@ -53,6 +53,13 @@
   padding: 0 8rem;
 }
 
+.SinglePost--InnerContent table thead {
+  background-color: #999999;
+}
+.SinglePost--InnerContent table tbody {
+  background-color: #eeeeee;
+}
+
 @media screen and (max-width: 750px) {
   .SinglePost--InnerContent {
     padding: 0;
