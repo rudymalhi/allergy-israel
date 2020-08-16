@@ -1,5 +1,6 @@
 import React from 'react'
 import ChevronDown from 'react-feather/dist/icons/chevron-down'
+import Marked from 'react-markdown'
 import _kebabCase from 'lodash/kebabCase'
 import './Accordion.css'
 
@@ -32,13 +33,16 @@ export default class Accordion extends React.Component {
               className={`Accordion--item `}
               key={`accordion-item-${_kebabCase(item.title) + '-' + index}`}
               onClick={this.handleClick}
+              style={{
+                backgroundImage: `url('${item.background}')`
+              }}
             >
               <h2 className="flex">
                 <span>{item.title}</span>
                 <ChevronDown />
               </h2>
-              <div className={'description'}>
-                {item.description} <br />
+              <div className={'description'} >
+                <Marked source={item.description}/>
                 {item.link && (
                   <div href={item.link} className="button">
                     {item.linkTitle}

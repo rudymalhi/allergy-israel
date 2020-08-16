@@ -5,12 +5,14 @@ import { ChevronLeft } from 'react-feather'
 
 import Content from '../components/Content'
 import Layout from '../components/Layout'
+import Accordion from '../components/Accordion'
 import './SinglePost.css'
 
 export const SinglePostTemplate = ({
   title,
   date,
   body,
+  accordion,
   nextPostURL,
   prevPostURL,
   categories = []
@@ -61,6 +63,9 @@ export const SinglePostTemplate = ({
 
           <div className="SinglePost--InnerContent">
             <Content source={body} />
+            {accordion && (
+              <Accordion items={accordion} />
+            )}
           </div>
 
           <div className="SinglePost--Pagination">
@@ -122,6 +127,11 @@ export const pageQuery = graphql`
         title
         template
         subtitle
+        accordion {
+          title
+          description
+          background
+        }
         date(formatString: "MMMM Do, YYYY")
         categories {
           category

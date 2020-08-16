@@ -21,6 +21,13 @@
   border-radius: 1rem;
   box-shadow: 0px 2px 25px 0px rgba(84, 131, 157, 0.2);
   cursor: pointer;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Accordion--item.active {
+  background-size: cover;
 }
 
 .Accordion--item h2 {
@@ -48,6 +55,8 @@
   opacity: 0;
   transition: ease all 0.3s;
   max-height: 0;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .Accordion--item.active .description {
