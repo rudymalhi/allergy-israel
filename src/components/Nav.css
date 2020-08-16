@@ -110,7 +110,7 @@
 
   .Nav--MenuButton {
     display: block !important;
-    margin-left: auto;
+    margin-right: auto;
     z-index: 1;
   }
   .Nav .Logo {
