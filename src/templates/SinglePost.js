@@ -6,6 +6,7 @@ import { ChevronLeft } from 'react-feather'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
 import Accordion from '../components/Accordion'
+import FileGallery from '../components/FileGallery'
 import './SinglePost.css'
 
 export const SinglePostTemplate = ({
@@ -13,6 +14,7 @@ export const SinglePostTemplate = ({
   date,
   body,
   accordion,
+  files,
   nextPostURL,
   prevPostURL,
   categories = []
@@ -65,6 +67,9 @@ export const SinglePostTemplate = ({
             <Content source={body} />
             {accordion && (
               <Accordion items={accordion} />
+            )}
+            {files && (
+              <FileGallery files={files} />
             )}
           </div>
 
@@ -131,6 +136,11 @@ export const pageQuery = graphql`
           title
           description
           background
+        }
+        files {
+          title
+          description
+          file
         }
         date(formatString: "MMMM Do, YYYY")
         categories {
