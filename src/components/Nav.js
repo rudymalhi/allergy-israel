@@ -49,7 +49,7 @@ export class Navigation extends Component {
             <Logo />
           </Link>
           <div className="Nav--Links">
-            {/* <NavLink to="/components/">Components</NavLink> */}
+            <NavLink to="/about/">אודות</NavLink>
             <div
               className={`Nav--Group ${
                 this.state.activeSubNav === 'posts' ? 'active' : ''
@@ -65,7 +65,7 @@ export class Navigation extends Component {
                 }`}
                 onClick={() => this.toggleSubNav('posts')}
               >
-                מידע
+                  מידע ומאמרים
                 <div className="Nav--GroupLinks">
                   {subNav.posts.map((link, index) => (
                     <NavLink
@@ -80,7 +80,7 @@ export class Navigation extends Component {
               </span>
             </div>
             <NavLink to="/חנות/">חנות</NavLink>
-            <NavLink to="/about/">אודות</NavLink>
+            <NavLink target="_blank" to="https://secure.cardcom.solutions/e/xSwQ">הצטרפות לעמותה</NavLink>
             <NavLink to="/contact/">צור קשר</NavLink>
           </div>
           <button
