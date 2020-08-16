@@ -233,6 +233,13 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Title, name: title, widget: string }
       - { label: Featured Image, name: featuredImage, widget: image }
       - { label: Body, name: body, widget: markdown }
+      - label: 'accordion'
+        name: 'accordion'
+        widget: 'list'
+        fields:
+          - { name: title, label: title, widget: string, default: '' }
+          - { name: description, label: description, widget: string }
+          - { name: background, label: background, widget: string }
       - label: 'Meta'
         required: false
         name: 'meta'
