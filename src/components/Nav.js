@@ -80,7 +80,7 @@ export class Navigation extends Component {
               </span>
             </div>
             <NavLink to="/חנות/">חנות</NavLink>
-            <Link class="NavLink" target="_blank" to="https://secure.cardcom.solutions/e/xSwQ">הצטרפות לעמותה</Link>
+            <a class="NavLink" target="_blank" href="https://secure.cardcom.solutions/e/xSwQ">הצטרפות לעמותה</a>
             <NavLink to="/contact/">צור קשר</NavLink>
           </div>
           <button
