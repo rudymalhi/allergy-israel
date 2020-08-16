@@ -45,3 +45,12 @@
   max-width: 50%;
   display: inline-block;
 }
+
+@media (max-width: 600px) {
+  .Content table.store td:first-child {
+    width: 20%;
+  }
+  .Content table.store td:last-child {
+    width: 80%;
+  }
+}
