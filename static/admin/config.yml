@@ -296,6 +296,14 @@ collections: # A list of collections the CMS should be able to edit
           - { name: title, label: title, widget: string, default: '' }
           - { name: description, label: description, widget: markdown }
           - { name: background, label: background, widget: image, required: false }
+      - label: 'files'
+        name: 'files'
+        widget: 'list'
+        required: false
+        fields: 
+          - { name: title, label: title, widget: string, default: '' }
+          - { name: thumbnail, label: thumbnail, widget: image, required: false }
+          - { name: file, label: file, widget: file, required: false }
       - label: 'Meta'
         required: false
         name: 'meta'
