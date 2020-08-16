@@ -22,3 +22,26 @@
   width: 100%;
   height: 100%;
 }
+
+.Content table.store td {
+  width: 50%;
+  vertical-align: middle;
+  padding-bottom: 5rem;
+}
+.Content table.store tr td:first-child {
+  text-align: left;
+}
+
+.Content table.store td:last-child {
+  padding-right: 5rem;
+}
+
+.Content table.store td img {
+  max-height: 200px;
+  display: inline-block;
+}
+
+.Content table.store td.double img {
+  max-width: 50%;
+  display: inline-block;
+}
