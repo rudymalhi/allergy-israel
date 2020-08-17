@@ -2,7 +2,7 @@
 template: HomePage
 slug: ''
 title: עמותת יה"ל
-featuredImage: 'https://ucarecdn.com/ee2723d3-0c7f-40a0-882b-d0ea969a7d44/'
+featuredImage: 'https://ucarecdn.com/cf349fbd-b50f-4939-96ca-ce3ee0af40c2/'
 subtitle: עמותה לאלרגיות מזון
 meta:
   description: This is a meta description.
