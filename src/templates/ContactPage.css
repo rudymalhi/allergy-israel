@@ -1,5 +1,8 @@
 .Contact {
 }
+.Contact .PageHeader {
+  padding: 1rem 0;
+}
 
 .Contact--Details {
   margin-top: 3rem;

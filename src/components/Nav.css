@@ -101,6 +101,7 @@
   display: block;
   position: relative;
   width: 15rem;
+  color: var(--darkGrey);
 }
 
 @media (max-width: 600px) {
