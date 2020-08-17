@@ -2,6 +2,6 @@
 template: BlogIndex
 title: אורח חיים ותזונה
 subtitle: ''
-featuredImage: https://ucarecdn.com/db0b1431-8739-426f-970d-8a80eacf02ef/-/preview/-/rotate/270/
+featuredImage: 'https://ucarecdn.com/f97a5d6f-92ea-4715-9069-281d1597d3d4/'
 ---
 
