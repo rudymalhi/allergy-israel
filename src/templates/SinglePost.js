@@ -64,7 +64,7 @@ export const SinglePostTemplate = ({
           )}
 
           <div className="SinglePost--InnerContent">
-            <Content source={body} />
+            <Content source={body} linkTarget="_blank"/>
             {accordion && (
               <Accordion items={accordion} />
             )}

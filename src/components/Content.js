@@ -67,7 +67,7 @@ const HtmlBlock = ({ value }) => {
   )
 }
 
-const Content = ({ source, src, className = '' }) => {
+const Content = ({ source, linkTarget, src, className = '' }) => {
   // accepts either html or markdown
   source = source || src || ''
   if (source.match(/^</)) {
@@ -85,6 +85,7 @@ const Content = ({ source, src, className = '' }) => {
     <Marked
       className={`Content ${className}`}
       source={encodeMarkdownURIs(source)}
+      linkTarget={linkTarget}
       renderers={{
         image: MyImage,
         html: HtmlBlock
@@ -96,7 +97,8 @@ const Content = ({ source, src, className = '' }) => {
 Content.propTypes = {
   source: PropTypes.string,
   src: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  linkTarget: PropTypes.string
 }
 
 export default Content
