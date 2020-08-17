@@ -17,7 +17,6 @@
 
 .FileGallery--Item {
   position: relative;
-  display: flex;
   flex-direction: column;
   width: calc(100% / 2 - 1rem);
   margin: 0;
@@ -25,8 +24,8 @@
   cursor: pointer;
   text-decoration: none;
   font-style: normal;
-  text-align: center;
   border: 1px solid transparent;
+  text-align: center;
 }
 .FileGallery--Item:hover {
   color: var(--primary);
@@ -37,6 +36,11 @@
   text-decoration: none;
   font-style: normal;
   color: black;
+}
+
+.FileGallery--ItemThumbnail {
+  max-width: 50px;
+  margin: 0 auto 1rem;
 }
 
 @media screen and (max-width: 750px) {

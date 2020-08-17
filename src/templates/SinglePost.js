@@ -141,6 +141,7 @@ export const pageQuery = graphql`
           title
           description
           file
+          thumbnail
         }
         date(formatString: "MMMM Do, YYYY")
         categories {

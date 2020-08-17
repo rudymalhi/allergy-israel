@@ -12,6 +12,7 @@ export const query = graphql`
         file
         description
         title
+        thumbnail
       }
     }
   }
@@ -43,6 +44,7 @@ export default class FileGallery extends Component {
                   target="_blank"
                 >
                   {file.title && <h3 class="FileGallery--ItemTitle">{file.title}</h3>}
+                  {file.thumbnail && <img class="FileGallery--ItemThumbnail" src={file.thumbnail}/>}
                   {file.description && <Marked source={file.description}/>}
                 </a>
               ))}
