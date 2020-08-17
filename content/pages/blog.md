@@ -2,7 +2,7 @@
 template: BlogIndex
 slug: blog
 title: כל המאמרים
-featuredImage: 'https://ucarecdn.com/b6254577-26bf-4b79-aa9b-f3793e2aebdc/'
+featuredImage: 'https://ucarecdn.com/1e741e3a-c95a-48d1-82c4-d169215e569a/'
 subtitle: –
 meta:
   description: This is a meta description.
