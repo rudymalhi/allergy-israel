@@ -2,7 +2,6 @@
 template: BlogIndex
 title: עצות והמלצות
 subtitle: ''
-featuredImage: 'https://ucarecdn.com/83a3c73d-f234-4086-9fad-cee3a9626230/'
+featuredImage: 'https://ucarecdn.com/aae39b67-d0fa-4a59-8bd8-812e5dd563c6/'
 ---
-
 
