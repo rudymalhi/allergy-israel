@@ -9,7 +9,14 @@
 }
 
 .PageHeader-large {
-  padding: 1rem 0;
+  padding: 12rem 0;
+}
+.PageHeader-large .PageHeader--Title {
+  line-height: 6rem;
+  max-width: 50rem;
+}
+.PageHeader-large .PageHeader--Subtitle {
+  max-width: 50rem;
 }
 
 .PageHeader--Title {
