@@ -38,4 +38,3 @@ meta:
   <video src="/images/סרטון הזרקה.mp4" controls controlslist="nodownload"></video>
 </section> -->
 
-![](https://ucarecdn.com/1b55e0fa-4bc2-44fd-8390-956e74b99a11/)
