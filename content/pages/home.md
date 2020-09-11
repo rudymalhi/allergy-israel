@@ -3,7 +3,10 @@ template: HomePage
 slug: ''
 title: אתם לא לבד בהתמודדות עם אלרגיה למזון
 featuredImage: 'https://ucarecdn.com/cf349fbd-b50f-4939-96ca-ce3ee0af40c2/'
-subtitle: כל אדם שסובל מאלרגיה למזון ראוי שיחייה חיים מלאים, ללא פחד מהשתתפות בפעילויות שלרוב האוכלוסייה נראות כמובנות מאליהן, מבלי שיחשוש לקנות מוצר מזון, לאכול במסעדה או לטייל בעולם
+subtitle: >-
+  כל אדם שסובל מאלרגיה למזון ראוי שיחייה חיים מלאים, ללא פחד מהשתתפות בפעילויות
+  שלרוב האוכלוסייה נראות כמובנות מאליהן, מבלי שיחשוש לקנות מוצר מזון, לאכול
+  במסעדה או לטייל בעולם
 meta:
   description: This is a meta description.
   title: עמותת יהל
@@ -34,3 +37,5 @@ meta:
 <!-- <section>
   <video src="/images/סרטון הזרקה.mp4" controls controlslist="nodownload"></video>
 </section> -->
+
+![](https://ucarecdn.com/1b55e0fa-4bc2-44fd-8390-956e74b99a11/)
