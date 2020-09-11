@@ -37,12 +37,8 @@
   display: block;
   padding: 4rem 2rem;
   width: 30%;
-  text-align: right;
   border: 1px solid var(--primary);
   text-decoration: none;
-}
-
-.Home .Content .three-buttons > a {
   transition: 300ms all ease-in-out;
 }
 .Home .Content .three-buttons > a:hover {
