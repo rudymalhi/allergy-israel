@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  position: relative;
+  width: calc(100% - 200px);
 }
 
 .PostCategoriesNav > * + * {
@@ -11,7 +11,7 @@
 }
 
 .PostCategoriesNav input[type='text'] {
-  left: 0;
+  left: 5%;
   position: absolute;
   border: 0;
   padding: 1rem 2rem;
@@ -32,6 +32,10 @@
 @media (max-width: 600px) {
   .PostCategoriesNav input[type='text'] {
     position: relative;
+    width: 100%;
+    left: 0;
+  }
+  .PostCategoriesNav {
     width: 100%;
   }
 }
