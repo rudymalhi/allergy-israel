@@ -11,13 +11,13 @@ meta:
   description: This is a meta description.
   title: עמותת יהל
 video: >-
-    <iframe width="1000" height="562" src="https://www.youtube.com/embed/ILcP0ihl9OI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ---
 <section>
   <div class="three-column">
     <div><h2>8,000 ילדים בשנה</h2>נולדים עם אלרגיות מזון</div>
     <div><h2>יותר מ300% עליה</h2> בשכיחות של אלרגיה למזון בילדים בישראל ב16 שנים אחרונות</div>
-    <div><h2>2,424 ילדים אושפזו</h2> בשנת 2017 בגין תגובה אלרגית/אנפילקטית </div>
+    <div><h2>2,424 ילדים אושפזו</h2> בשנת 2017 בגין תגובה אלרגית / אנפילקטית </div>
   </div>
 </section>
 <section>
@@ -36,5 +36,9 @@ video: >-
     <a href=""><h2>19/8 – 21:00</h2><h3>מפגש זום שאלות ותשובות</h3>עם <b>פרופ׳ אילן דלאל</b>, מבכירי האלרגולוגים בארץ</a>
   </div>
 </section>
-
+<section>
+  <div style="padding-bottom: 39.5%; position: relative; height: 0; overflow: hidden;">
+    <iframe style="width:70%; height:100%; top:0; position: absolute; right: 15%;" src="https://www.youtube.com/embed/ILcP0ihl9OI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</section>
 
