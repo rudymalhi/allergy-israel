@@ -10,6 +10,8 @@ subtitle: >-
 meta:
   description: This is a meta description.
   title: עמותת יהל
+video: >-
+    <iframe width="1000" height="562" src="https://www.youtube.com/embed/ILcP0ihl9OI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ---
 <section>
   <div class="three-column">
@@ -34,7 +36,5 @@ meta:
     <a href=""><h2>19/8 – 21:00</h2><h3>מפגש זום שאלות ותשובות</h3>עם <b>פרופ׳ אילן דלאל</b>, מבכירי האלרגולוגים בארץ</a>
   </div>
 </section>
-<!-- <section>
-  <video src="/images/סרטון הזרקה.mp4" controls controlslist="nodownload"></video>
-</section> -->
+
 
