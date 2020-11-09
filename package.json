@@ -58,7 +58,8 @@
     "clean": "del-cli .cache public",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "curl -X POST -d {} https://api.netlify.com/build_hooks/5fa93bff0b8561c5cbaaa7ab"
   },
   "devDependencies": {
     "del-cli": "^3.0.0",
