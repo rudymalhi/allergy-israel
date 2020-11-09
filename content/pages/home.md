@@ -3,12 +3,9 @@ template: HomePage
 slug: ''
 title: אתם לא לבד בהתמודדות עם אלרגיה למזון
 featuredImage: 'https://ucarecdn.com/cf349fbd-b50f-4939-96ca-ce3ee0af40c2/'
-subtitle:
 meta:
   description: This is a meta description.
   title: עמותת יהל
-video: >-
-
 ---
 <section>
   <div class="three-column">
@@ -20,8 +17,8 @@ video: >-
 <section>
   <h1>חיים עם אלרגיה למזון</h1>
   <div class="three-buttons">
-    <a href="/post-categories/מידע-כללי/"><h3>אלרגיה למזון</h3>למד עוד על אלרגיה למזון, אבחון וזיהוי תסמינים, וטיפול בתגובה אלרגית</a>
-    <a href="/post-categories/מוסדות-חינוך/"><h3>התנהלות במוסדות חינוך</h3> מידע על התנהלות מיטבית בגני ילדים, מעונות ובתי ספר</a>
+    <a href="/post-categories/מידע-כללי/"><h3>אלרגיה למזון</h3>למד עוד על אלרגיה למזון, אבחון, זיהוי תסמינים, וטיפול בתגובה אלרגית</a>
+    <a href="/post-categories/מוסדות-חינוך/"><h3>התנהלות במוסדות חינוך</h3> מידע על התנהלות מיטבית במעונות, גני ילדים  ובתי ספר</a>
     <a href="/post-categories/עצות-והמלצות/"><h3>עצות והמלצות</h3> איך לחיות עם אלרגיות למזון וּמידע על טיפולים</a>
   </div>
 </section>
@@ -38,4 +35,3 @@ video: >-
     <iframe style="width:70%; height:100%; top:0; position: absolute; right: 15%;" src="https://www.youtube.com/embed/ILcP0ihl9OI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </section>
-
