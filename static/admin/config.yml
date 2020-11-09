@@ -327,6 +327,7 @@ collections: # A list of collections the CMS should be able to edit
 
   - name: postCategories
     label: Post Category
+    order: Display Order
     editor:
       preview: false
     folder: content/postCategories
