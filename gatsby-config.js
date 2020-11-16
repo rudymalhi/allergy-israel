@@ -2,8 +2,8 @@ const postcssPresetEnv = require('postcss-preset-env')
 
 module.exports = {
   siteMetadata: {
-    title: 'Yellowcake',
-    siteUrl: 'https://yellowcake.netlify.com'
+    title: 'יהל – העמותה לאלרגיות מזון',
+    siteUrl: 'http://www.allergyisrael.org.il/'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -43,8 +43,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'yellowcake',
-        short_name: 'yellowcake',
+        name: 'עמותת יה“ל',
+        short_name: 'יה“ל',
         start_url: '/',
         background_color: '#00C2BD',
         theme_color: '#00C2BD',
