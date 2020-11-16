@@ -72,7 +72,7 @@ export const BlogIndexTemplate = ({
           {!!postCategories.length && (
             <section className="section thin">
               <div className="container">
-                <PostCategoriesNav enableSearch categories={postCategories} />
+                <PostCategoriesNav enableSearch categories={postCategories} location={location} />
               </div>
             </section>
           )}

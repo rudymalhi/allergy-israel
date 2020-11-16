@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import BlogSearch from './BlogSearch'
 import './PostCategoriesNav.css'
 
-const PostCategoriesNav = ({ categories, enableSearch }) => (
+const PostCategoriesNav = ({ categories, enableSearch, location }) => (
   <div className="PostCategoriesNav">
     <Link className="NavLink" exact="true" to={`/blog/`}>
     כל המאמרים
@@ -12,7 +12,7 @@ const PostCategoriesNav = ({ categories, enableSearch }) => (
     {categories.map((category, index) => (
       <Link
         exact="true"
-        className="NavLink"
+        className={`NavLink ${decodeURIComponent(location.pathname.split('/')[2]) === category.slug.split('/')[2] ? 'active' : ''}`}
         key={category.title + index}
         to={category.slug}
       >

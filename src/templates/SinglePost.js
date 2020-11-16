@@ -26,9 +26,9 @@ export const SinglePostTemplate = ({
       itemType="http://schema.org/BlogPosting"
     >
       <div className="container skinny">
-        <Link className="SinglePost--BackButton" to="/blog/">
+        <a className="SinglePost--BackButton" href="javascript:history.back()">
           <ChevronLeft /> חזרה
-        </Link>
+        </a>
         <div className="SinglePost--Content relative">
           <div className="SinglePost--Meta">
             {date && (
