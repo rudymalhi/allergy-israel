@@ -25,6 +25,7 @@
     "gatsby-plugin-sharp": "^2.2.36",
     "gatsby-plugin-sitemap": "^2.2.19",
     "gatsby-remark-images": "^3.1.28",
+    "gatsby-remark-images-medium-zoom": "^1.7.0",
     "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-remark-responsive-iframe": "^2.2.25",
     "gatsby-source-filesystem": "^2.1.35",
@@ -53,14 +54,14 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "npm run clean && npm run develop",
+    "start": "del-cli .cache public && gatsby develop",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "clean": "del-cli .cache public",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npm run build && netlify deploy --prod"
+    "deploy": "gatsby build && netlify deploy --prod"
   },
   "devDependencies": {
     "del-cli": "^3.0.0",

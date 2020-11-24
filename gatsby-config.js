@@ -89,6 +89,12 @@ module.exports = {
               linkImagesToOriginal: false
             }
           },
+          {
+            resolve: 'gatsby-remark-images-medium-zoom',
+            options: {
+              includedSelector: '.Content--Image'
+            }
+          },
           `gatsby-remark-responsive-iframe`
         ]
       }
