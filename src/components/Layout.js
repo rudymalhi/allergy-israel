@@ -23,7 +23,7 @@ export default ({ children, meta, title }) => {
           }
           allPosts: allMarkdownRemark(
             filter: { fields: { contentType: { eq: "postCategories" } } }
-            sort: { order: ASC, fields: [frontmatter___files] }
+            sort: { order: ASC, fields: [frontmatter___order] }
           ) {
             edges {
               node {
