@@ -2,7 +2,7 @@
 template: DefaultPage
 slug: about
 title: אודות
-featuredImage: 'https://ucarecdn.com/e2dd747f-32bb-4f6a-b2fe-38b29e9b0a2d/'
+featuredImage: 'https://ucarecdn.com/294168fc-e50a-42ed-b8bd-2b556552ae0d/'
 meta:
   description: ''
   title: אודות
