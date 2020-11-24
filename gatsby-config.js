@@ -95,7 +95,8 @@ module.exports = {
               includedSelector: '.Content--Image'
             }
           },
-          `gatsby-remark-responsive-iframe`
+          `gatsby-remark-responsive-iframe`,
+          `gatsby-remark-external-links`
         ]
       }
     },
