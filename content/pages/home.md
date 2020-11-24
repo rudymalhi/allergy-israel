@@ -2,7 +2,7 @@
 template: HomePage
 slug: ''
 title: אתם לא לבד בהתמודדות עם אלרגיה למזון
-featuredImage: 'https://ucarecdn.com/cf349fbd-b50f-4939-96ca-ce3ee0af40c2/'
+featuredImage: 'https://ucarecdn.com/5fd479f6-bf5a-4949-b2a7-97c67782d8ad/'
 meta:
   description: This is a meta description.
   title: עמותת יהל
