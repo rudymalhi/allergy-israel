@@ -4,14 +4,15 @@ import { graphql } from 'gatsby'
 import PageHeader from '../components/PageHeader'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
-import SVGIcon from '../components/SVGIcon'
+import Tabbed from '../components/Tabbed'
 
 // Export Template for use in CMS preview
 export const DefaultPageTemplate = ({
   title,
   subtitle,
   featuredImage,
-  body
+  body,
+  tabs
 }) => (
   <main className="DefaultPage">
     <PageHeader
@@ -23,6 +24,9 @@ export const DefaultPageTemplate = ({
     <section className="section">
       <div className="container">
         <Content source={body} />
+        {tabs && (
+          <Tabbed items={tabs} />
+        )}
       </div>
     </section>
   </main>
@@ -47,6 +51,10 @@ export const pageQuery = graphql`
         title
         subtitle
         featuredImage
+        tabs {
+          title
+          description
+        }
       }
     }
   }
