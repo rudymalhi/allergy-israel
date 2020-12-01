@@ -101,21 +101,33 @@ class Form extends React.Component {
             />
             <span>אימייל</span>
           </label>
-          <label className="Form--Label has-arrow">
-            <select
-              className="Form--Input Form--Select"
-              name="type"
-              defaultValue="סיבת הפניה"
-              required
-            >
-              <option disabled hidden>
-                סיבת הפניה
-              </option>
-              <option>כללי</option>
-              <option>מעוניין להתנדב</option>
-              <option>הזמנת הדרכה</option>
-            </select>
-          </label>
+          <div className="Form--Group">
+            <label className="Form--Label has-arrow">
+              <select
+                className="Form--Input Form--Select"
+                name="type"
+                defaultValue="סיבת הפניה"
+                required
+              >
+                <option disabled hidden>
+                  סיבת הפניה
+                </option>
+                <option>כללי</option>
+                <option>מעוניין להתנדב</option>
+                <option>הזמנת הדרכה</option>
+              </select>
+            </label>
+            <label className="Form--Label">
+              <input
+                className="Form--Input Form--InputText"
+                type="text"
+                placeholder="טלפון"
+                name="phone"
+                required={false}
+              />
+              <span>מספר טלפון</span>
+            </label>
+          </div>
           <label className="Form--Label">
             <textarea
               className="Form--Input Form--Textarea Form--InputText"
