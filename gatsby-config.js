@@ -46,8 +46,8 @@ module.exports = {
         name: 'עמותת יה“ל',
         short_name: 'יה“ל',
         start_url: '/',
-        background_color: '#00C2BD',
-        theme_color: '#00C2BD',
+        background_color: '#ffffff',
+        theme_color: '#ffffff',
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: 'standalone',

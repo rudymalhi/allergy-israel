@@ -8,7 +8,7 @@ import './Form.css'
 class Form extends React.Component {
   static defaultProps = {
     name: 'פניה לעמותה',
-    subject: '', // optional subject of the notification email
+    subject: 'פניה לעמותה מהאתר',
     successMessage: 'תודה על פנייתך. נחזור אליך בהקדם',
     errorMessage:
       'There is a problem, your message has not been sent, please try contacting us via email'
