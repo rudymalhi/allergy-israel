@@ -60,16 +60,16 @@
 }
 
 .Form--InputText:valid,
-.Form--InputText:invalid:not(:empty),
+.Form--InputText:invalid:not([value=""]),
 .Form--InputText:active,
 .Form--InputText:focus {
   padding-bottom: 0.5rem;
   padding-top: 2.5rem;
 }
 
-.Form--InputText:valid:not(:empty) + span,
-.Form--InputText:not(:empty) + span,
-.Form--InputText:invalid:not(:empty) + span,
+.Form--InputText:valid + span,
+.Form--InputText:not([value=""]) + span,
+.Form--InputText:invalid:not([value=""]) + span,
 .Form--InputText:active + span,
 .Form--InputText:focus + span {
   top: 0;
@@ -77,9 +77,9 @@
   font-size: 1.2rem;
 }
 
-.Form--Input:required:invalid:not(:empty) {
+/* .Form--Input:required:invalid:not([value=""]) {
   border-color: var(--danger);
-}
+} */
 
 .Form--Select {
   background: none;
