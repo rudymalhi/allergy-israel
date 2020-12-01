@@ -23,18 +23,14 @@ meta:
   </div>
 </section>
 <section>
-<div class="full">
-<h3>
-יום רביעי 2/12/2020 9:30
-מפגן מחאה בשניידר!!!
-</h3>
-
-אחרי ששנה הם הסתירו וטייחו, ונוכח הכתבה שהתפרסמה  ושמפרטת את שרשרת המחדלים שהובילה לפגיעה הקשה במאיה, אנחנו מתארגנים למחאה בשניידר במטרה לדרוש משניידר תשובות ולהבטיח שאסון כזה לא יקרה עוד.
-
-[הצטרפות לקבוצת ווטסאפ לבאי ההפגנה](https://
-chat.whatsapp.com/CCuXRywNINf3caO1eTF5vB)
-
-[לקריאת הכתבה המלאה](https://www.ynet.co.il/health/article/Hy00Ckpxjv?utm_source=ynet.app.android&utm_term=58523790&utm_campaign=whatsapp&utm_medium=social)
+  <h1>אירועים</h1>
+  <div class="two-buttons">
+    <div class="button">
+      <h2>יום רביעי 2/12/2020 9:30</h2><h3>מפגן מחאה בשניידר!!!</h3>אחרי ששנה הם הסתירו וטייחו, ונוכח הכתבה שהתפרסמה  ושמפרטת את שרשרת המחדלים שהובילה לפגיעה הקשה במאיה, אנחנו מתארגנים למחאה בשניידר במטרה לדרוש משניידר תשובות ולהבטיח שאסון כזה לא יקרה עוד.<br/><br/>
+      <a href="https://chat.whatsapp.com/CCuXRywNINf3caO1eTF5vB">הצטרפות לקבוצת ווטסאפ לבאי ההפגנה</a><br/><br/>
+      <a target="_blank" href="https://www.ynet.co.il/health/article/Hy00Ckpxjv?utm_source=ynet.app.android&utm_term=58523790&\utm_campaign=whatsapp&utm_medium=social">לקריאת הכתבה המלאה</a>
+    </div>
+  </div>
 </div>
 </section>
 <section>

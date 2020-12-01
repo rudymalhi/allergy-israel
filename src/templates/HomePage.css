@@ -28,14 +28,17 @@
   margin: 0 auto;
   max-width: 1000px;  
 }
-.Home .Content .three-buttons {
+.Home .Content .three-buttons, .Home .Content .two-buttons {
   display: flex;
   margin: 0 auto;
   max-width: 1000px;
   justify-content: space-between;
 }
+.Home .Content .two-buttons {
+  justify-content: center;
+}
 
-.Home .Content .three-buttons > a {
+.Home .Content .three-buttons > a, .Home .Content .two-buttons > .button {
   color: var(--secondary);
   display: block;
   padding: 4rem 2rem;
@@ -44,7 +47,11 @@
   text-decoration: none;
   transition: 300ms all ease-in-out;
 }
-.Home .Content .three-buttons > a:hover {
+.Home .Content .two-buttons > .button {
+  width: 45%;
+}
+
+.Home .Content .three-buttons > a:hover, .Home .Content .two-buttons > .button:hover {
   color: var(--primary);
   background-color: white;
   box-shadow: 0px 0px 20px rgba(0,0,0,.2);
