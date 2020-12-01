@@ -23,6 +23,21 @@ meta:
   </div>
 </section>
 <section>
+<div class="full">
+<h3>
+יום רביעי 2/12/2020 9:30
+מפגן מחאה בשניידר!!!
+</h3>
+
+אחרי ששנה הם הסתירו וטייחו, ונוכח הכתבה שהתפרסמה  ושמפרטת את שרשרת המחדלים שהובילה לפגיעה הקשה במאיה, אנחנו מתארגנים למחאה בשניידר במטרה לדרוש משניידר תשובות ולהבטיח שאסון כזה לא יקרה עוד.
+
+[הצטרפות לקבוצת ווטסאפ לבאי ההפגנה](https://
+chat.whatsapp.com/CCuXRywNINf3caO1eTF5vB)
+
+[לקריאת הכתבה המלאה](https://www.ynet.co.il/health/article/Hy00Ckpxjv?utm_source=ynet.app.android&utm_term=58523790&utm_campaign=whatsapp&utm_medium=social)
+</div>
+</section>
+<section>
   <h1>חודש פתיחת שנת הלימודים</h1>
   <div class="three-buttons">
     <a href="/education/"><h2>13/8 – 20:00</h2><h3>כנס זום עמותת יה“ל</h3>דגשים והבהרות חשובות לפתיחת שנה (גילאי מעון עד תיכון)</a>

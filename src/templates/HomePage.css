@@ -24,7 +24,10 @@
 .Home .Content .three-column h2 {
   margin-bottom: 0;
 }
-
+.Home .Content .full {
+  margin: 0 auto;
+  max-width: 1000px;  
+}
 .Home .Content .three-buttons {
   display: flex;
   margin: 0 auto;

@@ -63,7 +63,7 @@ class Image extends React.Component {
       onClick,
       title = '',
       alt = '',
-      lazy = true
+      lazy = false
     } = this.props
 
     const isUploadcare = this.checkIsUploadcare(src),
