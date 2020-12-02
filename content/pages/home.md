@@ -43,6 +43,6 @@ meta:
 </section>
 <section>
   <div style="padding-bottom: 39.5%; position: relative; height: 0; overflow: hidden;">
-    <iframe style="width:70%; height:100%; top:0; position: absolute; right: 15%;" src="https://www.youtube.com/embed/ILcP0ihl9OI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe style="width:70%; height:100%; top:0; position: absolute; right: 15%;" src="https://www.youtube.com/embed/ILcP0ihl9OI" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </section>
