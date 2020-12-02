@@ -68,7 +68,7 @@ tabs:
 
     
 meta:
-  description: ''
+  description: אודות עמותת יה“ל
   title: אודות
 ---
 

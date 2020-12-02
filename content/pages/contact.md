@@ -9,7 +9,6 @@ phone: 054-4671019
 email: info@allergyisrael.org.il
 address: ''
 meta:
-  description: This is a meta description.
   title: צור קשר
 ---
 #

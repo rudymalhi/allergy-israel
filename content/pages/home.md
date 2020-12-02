@@ -4,8 +4,7 @@ slug: ''
 title: אתם לא לבד בהתמודדות עם אלרגיה למזון
 featuredImage: 'https://ucarecdn.com/5fd479f6-bf5a-4949-b2a7-97c67782d8ad/'
 meta:
-  description: This is a meta description.
-  title: עמותת יהל
+  description: עמותת יה״ל הוקמה בשנת 2007 ע"י הורים לילדים אלרגים למזון במטרה לתת מענה ולתמוך במשפחות המתמודדות עם אתגר החיים עם אלרגיות למזון. כל בעלי התפקידים בעמותה הם הם הורים לילדים אלרגים בגילאים שונים ופועלים בהתנדבות מלאה.
 ---
 <section>
   <div class="three-column">
