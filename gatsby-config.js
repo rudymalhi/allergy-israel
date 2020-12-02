@@ -44,7 +44,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'עמותת יה“ל',
-        short_name: 'יה“ל',
+        short_name: 'עמותת יה“ל',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#ffffff',
