@@ -9,7 +9,7 @@ class Form extends React.Component {
   static defaultProps = {
     name: 'פניה לעמותה',
     subject: 'פניה לעמותה מהאתר',
-    successMessage: 'תודה על פנייתך. נחזור אליך בהקדם',
+    successMessage: 'תודה על פנייתך. נחזור אליך בהקדם.<br/>נודה לתמיכתך, <a href="https://secure.cardcom.solutions/e/xSwQ">הצטרף לעמותה</a>.',
     errorMessage:
       'There is a problem, your message has not been sent, please try contacting us via email'
   }
@@ -67,7 +67,7 @@ class Form extends React.Component {
           data-netlify="true"
         >
           {this.state.alert && (
-            <div className="Form--Alert">{this.state.alert}</div>
+            <div className="Form--Alert" dangerouslySetInnerHTML={{__html: this.state.alert}}></div>
           )}
           <div className="Form--Group">
             <label className="Form--Label">
