@@ -30,7 +30,7 @@
   position: relative;
   width: 80%;
   background-color: white;
-  max-width: 600px;
+  max-width: 550px;
   max-height: 80%;
   position: relative;
   z-index: 99999999;
@@ -40,7 +40,7 @@
 }
 .Popup-Inner:after {
   content: "";
-  background: url(/images/popup-background.jpg) no-repeat center;
+  background: url(/popup-background.jpg) no-repeat center;
   background-size: cover;
   opacity: 0.8;
   top: 0;
