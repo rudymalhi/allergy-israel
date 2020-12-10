@@ -8,6 +8,8 @@ import Sections from '../components/Sections'
 import './HomePage.css'
 import Popup from '../components/Popup'
 
+let showPopup = 0;
+
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({ title, subtitle, featuredImage, sections, body }) => (
   <main className="Home">
@@ -28,7 +30,7 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, sections, bod
 // Export Default HomePage for front-end
 const HomePage = ({ data: { page } }) => (
   <Layout meta={page.frontmatter.meta || false}>
-    {!!page.frontmatter.popup && (
+    {!!page.frontmatter.popup && !showPopup++ && (
       <Popup showPopup={true}>
         {page.frontmatter.popup}
       </Popup>
