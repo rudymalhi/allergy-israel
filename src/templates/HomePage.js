@@ -6,6 +6,7 @@ import Content from '../components/Content'
 import Layout from '../components/Layout'
 import Sections from '../components/Sections'
 import './HomePage.css'
+import Popup from '../components/Popup'
 
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({ title, subtitle, featuredImage, sections, body }) => (
@@ -27,6 +28,11 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, sections, bod
 // Export Default HomePage for front-end
 const HomePage = ({ data: { page } }) => (
   <Layout meta={page.frontmatter.meta || false}>
+    {!!page.frontmatter.popup && (
+      <Popup showPopup={true}>
+        {page.frontmatter.popup}
+      </Popup>
+    )}
     <HomePageTemplate {...page} {...page.frontmatter} body={page.html} />
   </Layout>
 )
@@ -46,11 +52,11 @@ export const pageQuery = graphql`
         title
         subtitle
         featuredImage
+        popup
         sections {
           title
           elements {
             title
-            link
             content
           }
         }
