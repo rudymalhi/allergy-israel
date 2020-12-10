@@ -4,10 +4,11 @@ import { graphql } from 'gatsby'
 import PageHeader from '../components/PageHeader'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
+import Sections from '../components/Sections'
 import './HomePage.css'
 
 // Export Template for use in CMS preview
-export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
+export const HomePageTemplate = ({ title, subtitle, featuredImage, sections, body }) => (
   <main className="Home">
     <PageHeader
       large
@@ -15,6 +16,9 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
       subtitle={subtitle}
       backgroundImage={featuredImage}
     />
+    {sections && (
+      <Sections items={sections} />
+    )}
 
     <Content source={body} />
   </main>
@@ -42,6 +46,14 @@ export const pageQuery = graphql`
         title
         subtitle
         featuredImage
+        sections {
+          title
+          elements {
+            title
+            link
+            content
+          }
+        }
       }
     }
   }
