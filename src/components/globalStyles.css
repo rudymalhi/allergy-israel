@@ -8,6 +8,7 @@
   --font-primary: 'Open Sans', sans-serif;
   --font-system: system-ui; /* postcssPresetEnv */
   --borderRadius: 3px;
+  --orange: #ff8c33;
 }
 
 ::-webkit-scrollbar {
@@ -68,6 +69,13 @@ h5,
 h6 {
   margin: 0;
   margin-bottom: 0.5em;
+}
+
+.landing h1 {
+  color: var(--orange);
+}
+.landing .Content {
+  text-align: center;
 }
 
 pre {

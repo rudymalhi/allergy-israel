@@ -11,11 +11,13 @@ export const DefaultPageTemplate = ({
   title,
   subtitle,
   featuredImage,
+  className,
   body,
   tabs
 }) => (
-  <main className="DefaultPage">
+  <main className={`DefaultPage ${className}`}>
     <PageHeader
+      large={className === 'landing'}
       title={title}
       subtitle={subtitle}
       backgroundImage={featuredImage}
@@ -51,6 +53,7 @@ export const pageQuery = graphql`
         title
         subtitle
         featuredImage
+        className
         tabs {
           title
           description

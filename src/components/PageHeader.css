@@ -8,8 +8,17 @@
   opacity: 0.8;
 }
 
+.landing .PageHeader .BackgroundImage {
+  opacity: 1;
+}
+
 .PageHeader-large {
   padding: 12rem 0;
+}
+
+.landing .PageHeader-large {
+  height: 45vw;
+  padding: 0;
 }
 .PageHeader-large .PageHeader--Title {
   line-height: 6rem;
@@ -41,3 +50,11 @@
     padding: 1rem 0;
   }
 }
+
+@media (min-width: 1500px) {
+  .landing .PageHeader-large {
+    height: 400px;
+  }
+}
+
+

@@ -30,17 +30,22 @@
   position: relative;
   width: 80%;
   background-color: white;
-  max-width: 550px;
+  max-width: 700px;
   max-height: 80%;
   position: relative;
   z-index: 99999999;
-  padding: 5rem;
-  padding-bottom: 10rem;
+  padding: 5rem 3rem 10rem 350px;
   overflow: hidden;
+}
+@media only screen and (max-width: 650px) {
+  .Popup-Inner {
+    padding: 5rem 3rem;
+    padding-bottom: 10rem;
+  }
 }
 .Popup-Inner:after {
   content: "";
-  background: url(/popup-background.jpg) no-repeat center;
+  background: url(/images/popup-background.jpeg) no-repeat center;
   background-size: cover;
   opacity: 0.8;
   top: 0;
