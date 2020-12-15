@@ -15,12 +15,12 @@ export default class Sections extends React.Component {
       <div className={`Sections ${className}`}>
         {!!items &&
           items.map((item, index) => (
-            <section>
+            <section key={index}>
               {!!item.title && (<h1>{item.title}</h1>)}
-              <div class="elements-wrapper">
+              <div className="elements-wrapper">
                 {!!item.elements &&
-                  item.elements.map((element) => (
-                  <a href={element.link}>{!!element.title && (<h3>{element.title}</h3>)}<Marked source={element.content}/></a>
+                  item.elements.map((element, idx) => (
+                  <a key={idx} href={element.link}>{!!element.title && (<h3>{element.title}</h3>)}<Marked source={element.content}/></a>
                   ))
                 }
               </div>
