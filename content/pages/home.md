@@ -31,13 +31,12 @@ sections:
   - title: אירועים
     elements:
     - content: |
-        ## יום רביעי 2/12/2020 9:30
-        ### מפגן מחאה בשניידר!!!
-        אחרי ששנה הם הסתירו וטייחו, ונוכח הכתבה שהתפרסמה  ושמפרטת את שרשרת המחדלים שהובילה לפגיעה הקשה במאיה, אנחנו מתארגנים למחאה בשניידר במטרה לדרוש משניידר תשובות ולהבטיח שאסון כזה לא יקרה עוד.
+        ## יום שלישי 22/12/2020 בשעה 21:00
+        ### מפגש זום ״שאלות ותשובות״ עם פרופ׳ דלאל בנושא טיפולים לאלרגיה למזון
 
-        [הצטרפות לקבוצת ווטסאפ לבאי ההפגנה](https://chat.whatsapp.com/CCuXRywNINf3caO1eTF5vB)
+        [רישום מוקדם לחברי עמותה בלבד](https://docs.google.com/forms/d/e/1FAIpQLSc0NO7mz4rkEfh4iWkL0TXFnZ7HgE6_pyzDEjZ3SG5zCp6zEw/viewform?usp=sf_link)
 
-        [לקריאת הכתבה המלאה](https://www.ynet.co.il/health/article/Hy00Ckpxjv?utm_source=ynet.app.android&utm_term=58523790&\utm_campaign=whatsapp&utm_medium=social)
+        [הצטרפות לעמותה](https://secure.cardcom.solutions/e/xSwQ)
   - title: סקרים
     elements:
     - link: https://forms.gle/LSWZxGjKYPQWep158
