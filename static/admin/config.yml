@@ -242,7 +242,23 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Type, name: className, widget: string }
       - { label: Featured Image, name: featuredImage, widget: image }
       - { label: Body, name: body, widget: markdown }
-      - label: 'tabs'
+      - label: 'Products'
+        name: 'products'
+        widget: 'list'
+        required: false
+        fields:
+          - { name: title, label: title, widget: string, default: '' }
+          - { name: description, label: description, widget: markdown }
+          - { label: Price, name: price, widget: string }
+          - { label: Link, name: link, widget: string }
+          - { label: Link Text, name: linkText, widget: string }
+          - name: productImages
+            label: Images
+            widget: 'list'
+            required: false
+            fields:
+              - { label: Image, name: imageUrl, widget: image }
+      - label: 'Tabs'
         name: 'tabs'
         widget: 'list'
         required: false

@@ -23,34 +23,34 @@
   height: 100%;
 }
 
-.Content table.store td {
+table.store td {
   width: 50%;
   vertical-align: middle;
   padding-bottom: 5rem;
 }
-.Content table.store tr td:first-child {
+table.store tr td:first-child {
   text-align: left;
 }
 
-.Content table.store td:last-child {
+table.store td:last-child {
   padding-right: 5rem;
 }
 
-.Content table.store td img {
+table.store td img {
   max-height: 200px;
   display: inline-block;
 }
 
-.Content table.store td.double img {
+table.store td.double img {
   max-width: 50%;
   display: inline-block;
 }
 
 @media (max-width: 600px) {
-  .Content table.store td:first-child {
+  table.store td:first-child {
     width: 20%;
   }
-  .Content table.store td:last-child {
+  table.store td:last-child {
     width: 80%;
   }
 }

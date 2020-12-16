@@ -5,6 +5,7 @@ import PageHeader from '../components/PageHeader'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
 import Tabbed from '../components/Tabbed'
+import Products from '../components/Products'
 
 // Export Template for use in CMS preview
 export const DefaultPageTemplate = ({
@@ -13,7 +14,8 @@ export const DefaultPageTemplate = ({
   featuredImage,
   className,
   body,
-  tabs
+  tabs,
+  products
 }) => (
   <main className={`DefaultPage ${className}`}>
     <PageHeader
@@ -29,6 +31,7 @@ export const DefaultPageTemplate = ({
         {tabs && (
           <Tabbed items={tabs} />
         )}
+        {products && <Products items={products} />}
       </div>
     </section>
   </main>
@@ -57,6 +60,16 @@ export const pageQuery = graphql`
         tabs {
           title
           description
+        }
+        products {
+          productImages {
+            imageUrl
+          }
+          title
+          description
+          price
+          link
+          linkText
         }
       }
     }
