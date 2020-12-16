@@ -49,8 +49,13 @@ table.store td.double img {
 @media (max-width: 600px) {
   table.store td:first-child {
     width: 20%;
+    max-width: 150px;
+  }
+  table.store td img {
+    max-width: 150px;
   }
   table.store td:last-child {
     width: 80%;
+    padding: 1rem;
   }
 }
