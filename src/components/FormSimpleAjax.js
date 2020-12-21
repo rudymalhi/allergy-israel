@@ -57,9 +57,6 @@ class Form extends React.Component {
 
     return (
       <Fragment>
-        <Helmet>
-          <script src="https://www.google.com/recaptcha/api.js" />
-        </Helmet>
         <form
           className="Form"
           name={name}
