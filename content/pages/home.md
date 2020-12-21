@@ -31,7 +31,7 @@ sections:
   - title: אירועים
     elements:
     - content: |
-        ## יום שלישי 22/12/2020 בשעה 21:00
+        ## יום רביעי 30/12/2020 בשעה 21:00
         ### מפגש זום ״שאלות ותשובות״ עם פרופ׳ דלאל בנושא טיפולים לאלרגיה למזון
 
         [רישום מוקדם לחברי עמותה בלבד](https://docs.google.com/forms/d/e/1FAIpQLSc0NO7mz4rkEfh4iWkL0TXFnZ7HgE6_pyzDEjZ3SG5zCp6zEw/viewform?usp=sf_link)
