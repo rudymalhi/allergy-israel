@@ -20,7 +20,7 @@ export default class Sections extends React.Component {
               <div className="elements-wrapper">
                 {!!item.elements &&
                   item.elements.map((element, idx) => (
-                  <a key={idx} href={element.link}>{!!element.title && (<h3>{element.title}</h3>)}<Marked source={element.content}/></a>
+                  <a key={idx} className={!element.title && !element.content ? 'empty-element' : ''} href={element.link}>{!!element.title && (<h3>{element.title}</h3>)}<Marked source={element.content}/></a>
                   ))
                 }
               </div>

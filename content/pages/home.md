@@ -48,6 +48,13 @@ sections:
     - link: https://forms.gle/Jm1ZSkSG7SEBYW4W8
       title: סקר אלרגנים מפורט
       content: הסקר נועד למי שענה על סקר האלרגיות ודיווח על אלרגיה לאגוזים, דגים או אחר
+    - title:
+    - link: https://docs.google.com/forms/d/e/1FAIpQLSfFo1zGDvsQpF8JFLMoGtKKy-zwMiPkHlmpvBQRbiaOCPeBjg/viewform?vc=0&c=0&w=1&flr=0
+      title: אלרגיה למזון והשפעתה על איכות החיים
+      content: |
+        שאלון אנונימי בנושא איכות חיים ואלרגיה למזון.  
+        השאלון מיועד להורים לאלרגים ולסובלים מאלרגיה בעצמם.
+    - title:
 meta:
   description: עמותת יה״ל הוקמה בשנת 2007 ע"י הורים לילדים אלרגים למזון במטרה לתת
     מענה ולתמוך במשפחות המתמודדות עם אתגר החיים עם אלרגיות למזון. כל בעלי
