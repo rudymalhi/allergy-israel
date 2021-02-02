@@ -54,7 +54,7 @@ export const pageQuery = graphql`
         title
         subtitle
         featuredImage
-        popup
+        # popup
         sections {
           title
           elements {
