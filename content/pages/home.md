@@ -31,10 +31,13 @@ sections:
   - title: אירועים
     elements:
     - content: |
-        ## יום רביעי 30/12/2020 בשעה 21:00
-        ### מפגש זום ״שאלות ותשובות״ עם פרופ׳ דלאל בנושא טיפולים לאלרגיה למזון
+        ## יום שני 22/02/2021 בשעה 21:00
+        ### מפגש בנושא אלרגיה למזון והשפעותיה על איכות החיים עם ד״ר מיכל יהודה-חנאל פסיכולוגית קלינית
 
-        [רישום מוקדם לחברי עמותה בלבד](https://docs.google.com/forms/d/e/1FAIpQLSc0NO7mz4rkEfh4iWkL0TXFnZ7HgE6_pyzDEjZ3SG5zCp6zEw/viewform?usp=sf_link)
+        מספר המקומות מוגבל, יש להרשם מראש.  
+        ההשתתפות במפגש היא  לחברי עמותת יה״ל בלבד.
+
+        [רישום לחברי עמותה בלבד](https://docs.google.com/forms/d/e/1FAIpQLSeR7WRHtzqzdN0Y368_EOStRcgpoXMusK2pl1TZkboyUCY_Uw/viewform?usp=sf_link)
 
         [הצטרפות לעמותה](https://secure.cardcom.solutions/e/xSwQ)
   - title: סקרים
