@@ -131,7 +131,12 @@ module.exports = {
         showSpinner: false
       }
     },
-    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: ['/whatsapp', '/תרומה', '/תודה']
+      }
+    },
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
