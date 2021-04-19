@@ -57,6 +57,7 @@ export const pageQuery = graphql`
         # popup
         sections {
           title
+          content
           elements {
             title
             content

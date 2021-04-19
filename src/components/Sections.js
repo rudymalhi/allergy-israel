@@ -1,6 +1,7 @@
 import React from 'react'
 import Marked from 'react-markdown'
 import _kebabCase from 'lodash/kebabCase'
+import Content from './Content'
 import './Sections.css'
 
 export default class Sections extends React.Component {
@@ -16,6 +17,7 @@ export default class Sections extends React.Component {
         {!!items &&
           items.map((item, index) => (
             <section key={index}>
+              {!!item.content && (<Content source={item.content} />)}
               {!!item.title && (<h1>{item.title}</h1>)}
               <div className="elements-wrapper">
                 {!!item.elements &&

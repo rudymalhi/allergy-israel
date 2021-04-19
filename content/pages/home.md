@@ -11,6 +11,10 @@ sections:
       content: בשכיחות של אלרגיה למזון בילדים בישראל ב16 שנים אחרונות
     - title: 2,424 ילדים אושפזו
       content: בשנת 2017 בגין תגובה אלרגית / אנפילקטית
+  - content: |
+      <div style="padding-bottom: 40%; position: relative; height: 0; overflow: hidden;">
+        <video style="width:100%; height:100%; top:0; position: absolute; right: 0;" src="/images/סרטון הזרקה.mp4" controls controlslist="nodownload"></video>
+      </div>
   - title: החיים עם אלרגיה למזון
     elements:
       - link: /post-categories/מידע-כללי/
@@ -64,8 +68,3 @@ meta:
     התפקידים בעמותה הם הם הורים לילדים אלרגים בגילאים שונים ופועלים בהתנדבות
     מלאה.
 ---
-<section>
-  <div style="padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden;">
-    <video style="width:100%; height:100%; top:0; position: absolute; right: 0;" src="/images/סרטון הזרקה.mp4" controls controlslist="nodownload"></video>
-  </div>
-</section>
