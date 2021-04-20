@@ -298,6 +298,7 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: SinglePost }
       - { label: Title, name: title, widget: string }
+      - { label: Title Link, name: titleLink, widget: string }
       - label: 'Status'
         name: 'status'
         widget: 'select'

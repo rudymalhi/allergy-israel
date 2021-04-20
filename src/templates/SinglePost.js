@@ -11,6 +11,7 @@ import './SinglePost.css'
 
 export const SinglePostTemplate = ({
   title,
+  titleLink,
   date,
   body,
   accordion,
@@ -57,10 +58,17 @@ export const SinglePostTemplate = ({
             )}
           </div>
 
-          {title && (
+          {title && !titleLink && (
             <h1 className="SinglePost--Title" itemProp="title">
               {title}
             </h1>
+          )}
+          {titleLink && (
+            <a className="SinglePost--TitleLink" href={titleLink} target="_blank">
+              <h1 className="SinglePost--Title" itemProp="title">
+                {title}
+              </h1>
+            </a>
           )}
 
           <div className="SinglePost--InnerContent">
@@ -130,6 +138,7 @@ export const pageQuery = graphql`
       id
       frontmatter {
         title
+        titleLink
         template
         subtitle
         accordion {

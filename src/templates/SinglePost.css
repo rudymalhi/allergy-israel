@@ -44,6 +44,11 @@
   margin-left: 0.75em;
 }
 
+.SinglePost--TitleLink {
+  text-decoration: none;
+  color: var(--secondary);
+}
+
 .SinglePost--Title {
   text-align: center;
   line-height: 1.2;
