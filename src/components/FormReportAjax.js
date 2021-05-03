@@ -24,7 +24,6 @@ class Form extends React.Component {
 
     const form = e.target
     const formData = new FormData(form)
-    const data = serialize(form)
     this.setState({ disabled: true })
     fetch(form.action, {
       method: 'POST',
@@ -163,10 +162,11 @@ class Form extends React.Component {
           </div>
           <label className="Form--Label">
             <input
+              id="front-image"
               className="Form--Input Form--InputText"
               type="file"
               placeholder="תמונת אריזה – חזית"
-              name="front"
+              name="frontImage"
               accept="image/png, image/jpeg"
               required
             />
@@ -174,10 +174,11 @@ class Form extends React.Component {
           </label>
           <label className="Form--Label">
             <input
+              id="back-image"
               className="Form--Input Form--InputText"
               type="file"
               placeholder="תמונת אריזה – גב"
-              name="front"
+              name="backImage"
               accept="image/png, image/jpeg"
               required
             />
