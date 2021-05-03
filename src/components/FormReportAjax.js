@@ -1,6 +1,4 @@
 import React, { Fragment } from 'react'
-import { stringify } from 'qs'
-import { serialize } from 'dom-form-serializer'
 
 import './Form.css'
 
@@ -25,14 +23,10 @@ class Form extends React.Component {
     const form = e.target
     const formData = new FormData(form)
     this.setState({ disabled: true })
-    const image1 = document.getElementById('front-image');
-    formData.append("image1", image1.files[0]);
-    const image2 = document.getElementById('back-image');
-    formData.append("image2", image2.files[0]);
-    fetch(form.action, {
+    fetch('/', {
       method: 'POST',
       headers: { "Content-Type": "multipart/form-data" },
-      body: new URLSearchParams(formData).toString()
+      body: formData
     })
       .then(res => {
         if (res.ok) {
@@ -51,6 +45,7 @@ class Form extends React.Component {
       })
       .catch(err => {
         console.error(err)
+        window.scrollTo(0,0)
         this.setState({
           disabled: false,
           alert: this.props.errorMessage
@@ -59,7 +54,7 @@ class Form extends React.Component {
   }
 
   render() {
-    const { name, subject } = this.props
+    const { name } = this.props
 
     return (
       <Fragment>
@@ -149,7 +144,6 @@ class Form extends React.Component {
                 type="radio"
                 name="warningExist"
                 value="yes"
-                required
               />
               <span>קיים סימון אלרגנים</span>
             </label>
@@ -159,7 +153,6 @@ class Form extends React.Component {
                 type="radio"
                 name="warningExist"
                 value="no"
-                required
               />
               <span>לא קיים סימון אלרגנים</span>
             </label>

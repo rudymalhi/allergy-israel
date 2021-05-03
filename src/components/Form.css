@@ -169,7 +169,7 @@
   cursor: pointer;
   user-select: none;
   padding: 0.2rem 1rem;
-  border-left: 2.5rem solid transparent;
+  border-right: 2.5rem solid transparent;
   border-radius: var(--borderRadius);
 }
 
@@ -185,7 +185,7 @@
   width: 2rem;
   height: 2rem;
   display: block;
-  right: 100%;
+  left: 100%;
   top: 50%;
   transform: translateY(-50%);
   background: var(--midGrey);
@@ -213,7 +213,7 @@
   position: absolute;
   display: block;
   top: 3px;
-  left: -17px;
+  right: -17px;
   font-weight: bold;
   color: white;
   opacity: 0;
