@@ -199,7 +199,7 @@
   width: 2rem;
   height: 2rem;
   display: block;
-  right: 100%;
+  left: 100%;
   top: 50%;
   transform: translateY(-50%);
   background: var(--primary);
