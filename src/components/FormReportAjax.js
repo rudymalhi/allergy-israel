@@ -25,6 +25,10 @@ class Form extends React.Component {
     const form = e.target
     const formData = new FormData(form)
     this.setState({ disabled: true })
+    const image1 = document.getElementById('front-image');
+    formData.append("image1", image1.files[0]);
+    const image2 = document.getElementById('back-image');
+    formData.append("image2", image2.files[0]);
     fetch(form.action, {
       method: 'POST',
       headers: { "Content-Type": "multipart/form-data" },
