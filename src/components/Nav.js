@@ -82,6 +82,7 @@ export class Navigation extends Component {
             <NavLink to="/חנות/">חנות</NavLink>
             <a className="NavLink" target="_blank" href="https://secure.cardcom.solutions/e/xSwQ">הצטרפות לעמותה</a>
             <NavLink to="/contact/">צור קשר</NavLink>
+            <NavLink to="/report/">דווח סימון לקוי</NavLink>
           </div>
           <button
             className="Button-blank Nav--MenuButton"
