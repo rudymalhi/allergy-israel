@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import JotformEmbed from 'react-jotform-embed';
 
-import FormReportAjax from '../components/FormReportAjax'
 import PageHeader from '../components/PageHeader'
 import Content from '../components/Content'
 // import GoogleMap from '../components/GoogleMap'
@@ -24,14 +24,7 @@ export const ReportProductLabelTemplate = ({
       subtitle={subtitle}
       backgroundImage={featuredImage}
     />
-    <section className="section Contact--Section1">
-      <div className="container Contact--Section1--Container">
-        <div>
-          <Content source={body} />
-          <FormReportAjax name="Report Form" />
-        </div>
-      </div>
-    </section>
+    <JotformEmbed src="https://form.jotform.com/211222815125039"/>
   </main>
 )
 
