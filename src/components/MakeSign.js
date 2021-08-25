@@ -63,6 +63,9 @@ export default class MakeSign extends Component {
     if (data.get("legume") === "on") {
       allergens.push("קטניות")
     }
+    if (data.get("soy") === "on") {
+      allergens.push("סויה")
+    }
     doc.text(
       allergens.reduce((acc, curr, idx) => {
         return acc + ` ${(allergens.length > 1 && idx === allergens.length - 1) ? "ו" : ""}${curr}${idx < allergens.length - 2 ? "," : ""}`
@@ -110,6 +113,7 @@ export default class MakeSign extends Component {
                 <input id="eggs" name="eggs" type="checkbox"/><label for="eggs"> ביצים</label>&nbsp;&nbsp;&nbsp;
                 <input id="sesame" name="sesame" type="checkbox"/><label for="sesame"> שומשום</label>&nbsp;&nbsp;&nbsp;
                 <input id="legume" name="legume" type="checkbox"/><label for="legume"> קטניות</label>&nbsp;&nbsp;&nbsp;
+                <input id="soy" name="soy" type="checkbox"/><label for="soy"> סויה</label>&nbsp;&nbsp;&nbsp;
               </>
             )}
           </div>
