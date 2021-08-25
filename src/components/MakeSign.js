@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { Component }  from 'react'
 import "jspdf/dist/polyfills.es.js";
 import { jsPDF } from "jspdf";
 import addFonts from '../fonts/Heebo';
 
-export default class MakeSign extends React.Component {
+export default class MakeSign extends Component {
   static defaultProps = {
     className: ''
+  }
+
+  state = {
+    target: "p"
   }
 
   handleSubmit = event => {
@@ -61,7 +65,7 @@ export default class MakeSign extends React.Component {
     }
     doc.text(
       allergens.reduce((acc, curr, idx) => {
-        return acc + ` ${idx === allergens.length - 1 ? "ו" : ""}${curr}${idx < allergens.length - 2 ? "," : ""}`
+        return acc + ` ${(allergens.length > 1 && idx === allergens.length - 1) ? "ו" : ""}${curr}${idx < allergens.length - 2 ? "," : ""}`
       }, ""),
       150, 125, { align: "center" }
     );
@@ -76,25 +80,38 @@ export default class MakeSign extends React.Component {
     doc.save("allergy-sign.pdf");
   }
 
+  handleOptionChange = event => {
+    this.setState({
+      target: event.target.value
+    });
+  }
+
   render() {
     const { className } = this.props
     return (
       <div className={`MakeSign ${className}`}>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <input id="preschool" checked value="p" name="target" type="radio"/><label for="preschool"> שלט לגן</label>&nbsp;&nbsp;&nbsp;
-            <input id="classroom" value="c" name="target" type="radio"/><label for="classroom"> שלט לכיתה</label>&nbsp;&nbsp;&nbsp;
-            <input id="school" value="s" name="target" type="radio"/><label for="school"> שלט לבית הספר</label>&nbsp;&nbsp;&nbsp;
+            <input id="preschool" checked={this.state.target === "p"} value="p" name="target" type="radio" onChange={this.handleOptionChange}/>
+            <label for="preschool"> שלט לגן</label>&nbsp;&nbsp;&nbsp;
+            <input id="classroom" checked={this.state.target === "c"} value="c" name="target" type="radio" onChange={this.handleOptionChange}/>
+            <label for="classroom"> שלט לכיתה</label>&nbsp;&nbsp;&nbsp;
+            <input id="school" checked={this.state.target === "s"} value="s" name="target" type="radio" onChange={this.handleOptionChange}/>
+            <label for="school"> שלט לבית הספר</label>&nbsp;&nbsp;&nbsp;
           </div>
           <br/>
           <div>
-            <input id="milk" name="milk" type="checkbox"/><label for="milk"> חלב</label>&nbsp;&nbsp;&nbsp;
-            <input id="eggs" name="eggs" type="checkbox"/><label for="eggs"> ביצים</label>&nbsp;&nbsp;&nbsp;
             <input id="nuts" name="nuts" type="checkbox"/><label for="nuts"> אגוזים</label>&nbsp;&nbsp;&nbsp;
             <input id="peanuts" name="peanuts" type="checkbox"/><label for="peanuts"> בוטנים</label>&nbsp;&nbsp;&nbsp;
-            <input id="sesame" name="sesame" type="checkbox"/><label for="sesame"> שומשום</label>&nbsp;&nbsp;&nbsp;
             <input id="fish" name="fish" type="checkbox"/><label for="fish"> דגים</label>&nbsp;&nbsp;&nbsp;
-            <input id="legume" name="legume" type="checkbox"/><label for="legume"> קטניות</label>&nbsp;&nbsp;&nbsp;
+            {(this.state.target !== "s") && (
+              <>
+                <input id="milk" name="milk" type="checkbox"/><label for="milk"> חלב</label>&nbsp;&nbsp;&nbsp;
+                <input id="eggs" name="eggs" type="checkbox"/><label for="eggs"> ביצים</label>&nbsp;&nbsp;&nbsp;
+                <input id="sesame" name="sesame" type="checkbox"/><label for="sesame"> שומשום</label>&nbsp;&nbsp;&nbsp;
+                <input id="legume" name="legume" type="checkbox"/><label for="legume"> קטניות</label>&nbsp;&nbsp;&nbsp;
+              </>
+            )}
           </div>
           <br/>
           <br/>
