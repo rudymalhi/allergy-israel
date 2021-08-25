@@ -294,6 +294,10 @@ collections: # A list of collections the CMS should be able to edit
       - { label: Type, name: className, widget: string }
       - { label: Featured Image, name: featuredImage, widget: image }
       - { label: Body, name: body, widget: markdown }
+      - label: 'Show PDF Sign'
+        name: 'showSign'
+        widget: 'boolean'
+        required: false
       - label: 'Products'
         name: 'products'
         widget: 'list'

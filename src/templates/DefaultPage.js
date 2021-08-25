@@ -6,6 +6,7 @@ import Content from '../components/Content'
 import Layout from '../components/Layout'
 import Tabbed from '../components/Tabbed'
 import Products from '../components/Products'
+import MakeSign from '../components/MakeSign'
 
 // Export Template for use in CMS preview
 export const DefaultPageTemplate = ({
@@ -15,7 +16,8 @@ export const DefaultPageTemplate = ({
   className,
   body,
   tabs,
-  products
+  products,
+  showSign
 }) => (
   <main className={`DefaultPage ${className}`}>
     <PageHeader
@@ -32,6 +34,7 @@ export const DefaultPageTemplate = ({
           <Tabbed items={tabs} />
         )}
         {products && <Products items={products} />}
+        {showSign && <MakeSign/>}
       </div>
     </section>
   </main>
@@ -57,6 +60,7 @@ export const pageQuery = graphql`
         subtitle
         featuredImage
         className
+        showSign
         tabs {
           title
           description
