@@ -1,4 +1,5 @@
 import React from 'react'
+import "jspdf/dist/polyfills.es.js";
 import { jsPDF } from "jspdf";
 import addFonts from '../fonts/Heebo';
 
