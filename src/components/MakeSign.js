@@ -3,82 +3,95 @@ import "jspdf/dist/polyfills.es.js";
 import { jsPDF } from "jspdf";
 import addFonts from '../fonts/Heebo';
 
+const allergenMap = {
+  milk: "חלב",
+  eggs: "ביצים",
+  nuts: "אגוזים",
+  peanuts: "בוטנים",
+  almond: "שקדים",
+  pinenuts: "צנוברים",
+  sesame: "שומשום",
+  fish: "דגים",
+  legume: "קטניות",
+  soy: "סויה",
+}
+
+const nutsMap = {
+  nut1: "מלך",
+  nut2: "פקאן",
+  nut3: "קשיו",
+  nut4: "פיסטוק",
+  nut5: "לוז",
+  nut6: "מקדמיה",
+  nut7: "ברזיל",
+}
+
 export default class MakeSign extends Component {
   static defaultProps = {
     className: ''
   }
 
   state = {
-    target: "p"
+    target: "p",
+    nuts: false
   }
 
   handleSubmit = event => {
     event.preventDefault()
-    const doc = new jsPDF({ orientation: "landscape" });
+    const doc = new jsPDF({ orientation: "landscape", format: "a3" });
     const data = new FormData(event.target);
 
     addFonts(doc);
     doc.setR2L(true);
     doc.setFont('Heebo', 'normal', 'normal');
-    doc.setFontSize(34);
+    doc.setFontSize(48);
     const type = `${data.get("target") === "p" ? "גן" : (data.get("target") === "c" ? "כיתה" : "בית הספר")}`;
     doc.text(
       `ב${type} שלנו לומדים תלמידים בעלי אלרגיה מסכנת חיים.`,
-      150, 85, { align: "center" }
+      210, 140, { align: "center" }
     );
-    doc.setFontSize(18);
+    doc.setFontSize(36);
     doc.text(
       "תודה על תשומת הלב ושיתוף הפעולה,",
-      150, 190, { align: "center" }
+      210, 270, { align: "center" }
     )
     doc.text(
       "ההנהלה והצוות החינוכי",
-      150, 198, { align: "center" }
+      210, 285, { align: "center" }
     )
     doc.setFont('Heebo', 'normal', 'bold');
-    doc.setFontSize(42);
+    doc.setFontSize(60);
+    const allergens = [];
+    for (const k in allergenMap) {
+      if (data.get(k) === "on") {
+        const detailedNuts = [];
+        if (k === "nuts") {
+          for (const k in nutsMap) {
+            if (data.get(k) === "on") {
+              detailedNuts.push(nutsMap[k])
+            }
+          }
+        } 
+        allergens.push(allergenMap[k] + (detailedNuts.length ? ` )${detailedNuts.join(", ")}(` : ""))
+      }
+    }
     doc.text(
       `חל איסור להכניס ל${type} מוצרים המכילים`,
-      150, 105, { align: "center" }
+      210, 170, { align: "center" }
     );
-    const allergens = [];
-    if (data.get("milk") === "on") {
-      allergens.push("חלב")
-    }
-    if (data.get("eggs") === "on") {
-      allergens.push("ביצים")
-    }
-    if (data.get("nuts") === "on") {
-      allergens.push("אגוזים")
-    }
-    if (data.get("peanuts") === "on") {
-      allergens.push("בוטנים")
-    }
-    if (data.get("sesame") === "on") {
-      allergens.push("שומשום")
-    }
-    if (data.get("fish") === "on") {
-      allergens.push("דגים")
-    }
-    if (data.get("legume") === "on") {
-      allergens.push("קטניות")
-    }
-    if (data.get("soy") === "on") {
-      allergens.push("סויה")
-    }
     doc.text(
       allergens.reduce((acc, curr, idx) => {
         return acc + ` ${(allergens.length > 1 && idx === allergens.length - 1) ? "ו" : ""}${curr}${idx < allergens.length - 2 ? "," : ""}`
       }, ""),
-      150, 125, { align: "center" }
+      210, 200, { align: "center", maxWidth: 410 }
     );
     const headerImage = new Image();
     headerImage.src = '/images/welcome.png';
-    doc.addImage(headerImage, 'PNG', 30, 10, 230, 50);
+    doc.addImage(headerImage, 'PNG', 30, 10, 370, 80);
 
     const image = new Image();
-    image.src = '/images/logo.png';
-    doc.addImage(image, 'PNG', 10, 185, 50, 20);
+    image.src = '/images/logo-for-pdf.png';
+    doc.addImage(image, 'PNG', 10, 250, 100, 40);
 
     doc.save("allergy-sign.pdf");
   }
@@ -86,6 +99,12 @@ export default class MakeSign extends Component {
   handleOptionChange = event => {
     this.setState({
       target: event.target.value
+    });
+  }
+
+  handleNutChange = event => {
+    this.setState({
+      nuts: event.target.checked
     });
   }
 
@@ -104,19 +123,30 @@ export default class MakeSign extends Component {
           </div>
           <br/>
           <div>
-            <input id="nuts" name="nuts" type="checkbox"/><label for="nuts"> אגוזים</label>&nbsp;&nbsp;&nbsp;
+            <input id="nuts" name="nuts" type="checkbox" checked={this.state.nuts} onChange={this.handleNutChange}/><label for="nuts"> אגוזים</label>&nbsp;&nbsp;&nbsp;
             <input id="peanuts" name="peanuts" type="checkbox"/><label for="peanuts"> בוטנים</label>&nbsp;&nbsp;&nbsp;
             <input id="fish" name="fish" type="checkbox"/><label for="fish"> דגים</label>&nbsp;&nbsp;&nbsp;
             {(this.state.target !== "s") && (
               <>
-                <input id="milk" name="milk" type="checkbox"/><label for="milk"> חלב</label>&nbsp;&nbsp;&nbsp;
-                <input id="eggs" name="eggs" type="checkbox"/><label for="eggs"> ביצים</label>&nbsp;&nbsp;&nbsp;
-                <input id="sesame" name="sesame" type="checkbox"/><label for="sesame"> שומשום</label>&nbsp;&nbsp;&nbsp;
-                <input id="legume" name="legume" type="checkbox"/><label for="legume"> קטניות</label>&nbsp;&nbsp;&nbsp;
-                <input id="soy" name="soy" type="checkbox"/><label for="soy"> סויה</label>&nbsp;&nbsp;&nbsp;
+                {Object.keys(allergenMap).filter(k => !["nuts","peanuts","fish"].includes(k)).map((k) => (
+                  <>
+                  <input id={k} name={k} type="checkbox"/><label for={k}> {allergenMap[k]}</label>&nbsp;&nbsp;&nbsp;
+                  </>
+                ))}
               </>
             )}
           </div>
+          <br/>
+          {this.state.nuts && (
+          <div>
+            <label>סוגי אגוזים: </label>
+            {Object.keys(nutsMap).map((k) => (
+              <>
+              <input id={k} name={k} type="checkbox"/><label for={k}> {nutsMap[k]}</label>&nbsp;&nbsp;&nbsp;
+              </>
+            ))}
+          </div>
+          )}
           <br/>
           <br/>
           <div>
