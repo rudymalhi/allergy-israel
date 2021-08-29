@@ -33,7 +33,8 @@ export default class MakeSign extends Component {
 
   state = {
     target: "p",
-    nuts: false
+    nuts: false,
+    other: false
   }
 
   handleSubmit = event => {
@@ -75,6 +76,9 @@ export default class MakeSign extends Component {
         allergens.push(allergenMap[k] + (detailedNuts.length ? ` )${detailedNuts.join(", ")}(` : ""))
       }
     }
+    if (data.get("other") === "on" && data.get("otherText")) {
+      allergens.push(data.get("otherText"))
+    }
     doc.text(
       `חל איסור להכניס ל${type} מוצרים המכילים`,
       210, 170, { align: "center" }
@@ -108,6 +112,12 @@ export default class MakeSign extends Component {
     });
   }
 
+  handleOtherChange = event => {
+    this.setState({
+      other: event.target.checked
+    });
+  }
+
   render() {
     const { className } = this.props
     return (
@@ -122,19 +132,33 @@ export default class MakeSign extends Component {
             <label for="school"> שלט לבית הספר</label>&nbsp;&nbsp;&nbsp;
           </div>
           <br/>
-          <div>
-            <input id="nuts" name="nuts" type="checkbox" checked={this.state.nuts} onChange={this.handleNutChange}/><label for="nuts"> אגוזים</label>&nbsp;&nbsp;&nbsp;
-            <input id="peanuts" name="peanuts" type="checkbox"/><label for="peanuts"> בוטנים</label>&nbsp;&nbsp;&nbsp;
-            <input id="fish" name="fish" type="checkbox"/><label for="fish"> דגים</label>&nbsp;&nbsp;&nbsp;
+          <div class="flexbox-container">
+            <div>
+              <input id="nuts" name="nuts" type="checkbox" checked={this.state.nuts} onChange={this.handleNutChange}/><label for="nuts"> אגוזים</label>&nbsp;&nbsp;&nbsp;
+            </div>
+            <div>
+              <input id="peanuts" name="peanuts" type="checkbox"/><label for="peanuts"> בוטנים</label>&nbsp;&nbsp;&nbsp;
+              </div>
+            <div>
+              <input id="fish" name="fish" type="checkbox"/><label for="fish"> דגים</label>&nbsp;&nbsp;&nbsp;
+            </div>
             {(this.state.target !== "s") && (
               <>
                 {Object.keys(allergenMap).filter(k => !["nuts","peanuts","fish"].includes(k)).map((k) => (
-                  <>
-                  <input id={k} name={k} type="checkbox"/><label for={k}> {allergenMap[k]}</label>&nbsp;&nbsp;&nbsp;
-                  </>
+                  <div>
+                    <input id={k} name={k} type="checkbox"/><label for={k}> {allergenMap[k]}</label>&nbsp;&nbsp;&nbsp;
+                  </div>
                 ))}
               </>
             )}
+            <div>
+              <input id="other" name="other" type="checkbox" checked={this.state.other} onChange={this.handleOtherChange}/><label for="other"> אחר</label>&nbsp;&nbsp;&nbsp;
+              {this.state.other && (
+                <>
+                <input id="otherText" name="otherText" type="text" placeholder="פירוט אלרגנים נוספים"/>&nbsp;&nbsp;&nbsp;
+                </>
+              )}
+            </div>
           </div>
           <br/>
           {this.state.nuts && (

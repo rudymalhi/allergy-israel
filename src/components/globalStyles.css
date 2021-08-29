@@ -241,3 +241,12 @@ blockquote {
   align-items: center;
   justify-content: center;
 }
+
+.flexbox-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexbox-container > div {
+  width: 33%
+}
