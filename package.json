@@ -3,6 +3,9 @@
   "HomePage": "https://yellowcake.netlify.com/",
   "description": "An opinionated starter project for creating lightning-fast websites with Gatsby v2 and Netlify CMS v2",
   "version": "2.0.0",
+  "engines": {
+    "node": "16"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/thriveweb/yellowcake"
@@ -65,7 +68,8 @@
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build && netlify deploy --prod"
+    "predeploy": "gatsby build",
+    "deploy": "netlify deploy --prod"
   },
   "devDependencies": {
     "del-cli": "^3.0.0",

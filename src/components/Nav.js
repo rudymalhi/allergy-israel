@@ -65,7 +65,7 @@ export class Navigation extends Component {
                 }`}
                 onClick={() => this.toggleSubNav('posts')}
               >
-                  מידע ומאמרים
+                מידע ומאמרים
                 <div className="Nav--GroupLinks">
                   {subNav.posts.map((link, index) => (
                     <NavLink
@@ -80,9 +80,40 @@ export class Navigation extends Component {
               </span>
             </div>
             <NavLink to="/חנות/">חנות</NavLink>
-            <a className="NavLink" target="_blank" href="https://secure.cardcom.solutions/e/xSwQ">הצטרפות לעמותה</a>
+            <a
+              className="NavLink"
+              target="_blank"
+              href="https://secure.cardcom.solutions/e/xSwQ"
+            >
+              הצטרפות לעמותה
+            </a>
             <NavLink to="/contact/">צור קשר</NavLink>
-            <NavLink to="/report/">דווח סימון לקוי</NavLink>
+            <div
+              className={`Nav--Group ${
+                this.state.activeSubNav === 'recall' ? 'active' : ''
+              }`}
+            >
+              <span
+                className={`NavLink Nav--GroupParent ${
+                  this.props.location.pathname.includes('report')
+                    ? 'active'
+                    : ''
+                }`}
+                onClick={() => this.toggleSubNav('recall')}
+              >
+                ריקול ודווח
+                <div className="Nav--GroupLinks">
+                  <a
+                    className="NavLink"
+                    target="_blank"
+                    href="https://www.gov.il/he/departments/news/?OfficeId=104cb0f4-d65a-4692-b590-94af928c19c0&topic=3f9fe17e-8c90-4328-a968-b6be5f3c14da&keywords=אלרג"
+                  >
+                    הודעות ריקול
+                  </a>
+                  <NavLink to="/report/">דווח סימון לקוי</NavLink>
+                </div>
+              </span>
+            </div>
             <NavLink to="/sign/">שלט לגן/כיתה</NavLink>
           </div>
           <button
