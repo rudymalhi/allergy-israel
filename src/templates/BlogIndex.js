@@ -72,7 +72,11 @@ export const BlogIndexTemplate = ({
           {!!postCategories.length && (
             <section className="section thin">
               <div className="container">
-                <PostCategoriesNav enableSearch categories={postCategories} location={location} />
+                <PostCategoriesNav
+                  enableSearch
+                  categories={postCategories}
+                  location={location}
+                />
               </div>
             </section>
           )}
@@ -142,12 +146,12 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
           frontmatter {
             title
+            excerpt
             date
             categories {
               category

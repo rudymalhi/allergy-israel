@@ -186,7 +186,12 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { name: title, label: title, widget: string, default: '' }
               - { name: description, label: description, widget: markdown }
-              - { name: background, label: background, widget: image, required: false }
+              - {
+                  name: background,
+                  label: background,
+                  widget: image,
+                  required: false,
+                }
           - label: 'Gallery'
             name: 'gallery'
             widget: 'list'
@@ -232,7 +237,12 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Slug, name: slug, widget: hidden, default: '' }
           - { label: Title, name: title, widget: string }
           - { label: Featured Image, name: featuredImage, widget: image }
-          - { label: Subtitle, name: subtitle, widget: markdown, required: false }
+          - {
+              label: Subtitle,
+              name: subtitle,
+              widget: markdown,
+              required: false,
+            }
           - { label: Body, name: body, widget: markdown }
           - { label: Popup, name: popup, required: false, widget: markdown }
           - label: 'Sections'
@@ -240,15 +250,35 @@ collections: # A list of collections the CMS should be able to edit
             widget: 'list'
             required: false
             fields:
-              - { label: 'Title', name: 'title', widget: 'string', required: false }
-              - { label: Content, name: content, widget: markdown, required: false }
+              - {
+                  label: 'Title',
+                  name: 'title',
+                  widget: 'string',
+                  required: false,
+                }
+              - {
+                  label: Content,
+                  name: content,
+                  widget: markdown,
+                  required: false,
+                }
               - label: 'Elements'
                 name: 'elements'
                 widget: 'list'
                 required: false
                 fields:
-                  - { label: 'Title', name: 'title', widget: 'string', required: false }
-                  - { label: Content, name: content, widget: text, required: false }
+                  - {
+                      label: 'Title',
+                      name: 'title',
+                      widget: 'string',
+                      required: false,
+                    }
+                  - {
+                      label: Content,
+                      name: content,
+                      widget: text,
+                      required: false,
+                    }
                   - { label: Link, name: link, widget: string, required: false }
           - label: 'Meta'
             required: false
@@ -351,7 +381,7 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - { label: Template, name: template, widget: hidden, default: SinglePost }
       - { label: Title, name: title, widget: string }
-      - { label: Title Link, name: titleLink, widget: string }
+      - { label: Title Link, name: titleLink, widget: string, required: false }
       - label: 'Status'
         name: 'status'
         widget: 'select'
@@ -384,15 +414,30 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - { name: title, label: title, widget: string, default: '' }
           - { name: description, label: description, widget: markdown }
-          - { name: background, label: background, widget: image, required: false }
+          - {
+              name: background,
+              label: background,
+              widget: image,
+              required: false,
+            }
       - label: 'files'
         name: 'files'
         widget: 'list'
         required: false
-        fields: 
+        fields:
           - { name: title, label: title, widget: string, default: '' }
-          - { name: description, label: description, widget: markdown, required: false }
-          - { name: thumbnail, label: thumbnail, widget: image, required: false }
+          - {
+              name: description,
+              label: description,
+              widget: markdown,
+              required: false,
+            }
+          - {
+              name: thumbnail,
+              label: thumbnail,
+              widget: image,
+              required: false,
+            }
           - { name: file, label: file, widget: file }
       - label: 'Meta'
         required: false

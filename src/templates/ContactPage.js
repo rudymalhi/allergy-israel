@@ -52,9 +52,12 @@ export const ContactPageTemplate = ({
                 <Mail /> {email}
               </a>
             )}
-            <a className="Contact--Details--Item" href="https://www.facebook.com/Foodallergy.il/">
-              <img src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=32&h=32"></img>
-                דף הפייסבוק של עמותת יהל
+            <a
+              className="Contact--Details--Item"
+              href="https://www.facebook.com/Foodallergy.il/"
+            >
+              <img height={32} src="/images/facebook.png"></img>
+              דף הפייסבוק של עמותת יהל
             </a>
           </div>
         </div>
