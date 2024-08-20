@@ -140,10 +140,10 @@ export default class MakeSign extends Component {
           <div>
             <input id="preschool" checked={this.state.target === "p"} value="p" name="target" type="radio" onChange={this.handleOptionChange}/>
             <label for="preschool"> שלט לגן</label>&nbsp;&nbsp;&nbsp;
-            <input id="preschools" checked={this.state.target === "q"} value="q" name="target" type="radio" onChange={this.handleOptionChange}/>
-            <label for="preschools"> שלט למתחם גנים</label>&nbsp;&nbsp;&nbsp;
             <input id="classroom" checked={this.state.target === "c"} value="c" name="target" type="radio" onChange={this.handleOptionChange}/>
             <label for="classroom"> שלט לכיתה</label>&nbsp;&nbsp;&nbsp;
+            <input id="preschools" checked={this.state.target === "q"} value="q" name="target" type="radio" onChange={this.handleOptionChange}/>
+            <label for="preschools"> שלט למתחם גנים</label>&nbsp;&nbsp;&nbsp;
             <input id="school" checked={this.state.target === "s"} value="s" name="target" type="radio" onChange={this.handleOptionChange}/>
             <label for="school"> שלט לבית הספר</label>&nbsp;&nbsp;&nbsp;
           </div>
@@ -158,7 +158,7 @@ export default class MakeSign extends Component {
             <div>
               <input id="fish" name="fish" type="checkbox"/><label for="fish"> דגים</label>&nbsp;&nbsp;&nbsp;
             </div>
-            {(this.state.target !== "s") && (
+            {(this.state.target !== "s" && this.state.target !== "q") && (
               <>
                 {Object.keys(allergenMap).filter(k => !["nuts","peanuts","fish"].includes(k)).map((k) => (
                   <div>
