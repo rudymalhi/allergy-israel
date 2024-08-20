@@ -46,7 +46,21 @@ export default class MakeSign extends Component {
     doc.setR2L(true);
     doc.setFont('Heebo', 'normal', 'normal');
     doc.setFontSize(48);
-    const type = `${data.get("target") === "p" ? "גן" : (data.get("target") === "c" ? "כיתה" : "בית הספר")}`;
+    let type = "";
+    switch (data.get("target")) {
+      case "p":
+        type = "גן";
+        break;
+      case "q":
+        type = "מתחם";
+        break;
+      case "c":
+        type = "כיתה";
+        break;
+      case "s":
+        type = "בית הספר";
+        break;
+    }
     doc.text(
       `ב${type} שלנו לומדים תלמידים בעלי אלרגיה מסכנת חיים.`,
       210, 140, { align: "center" }
@@ -126,6 +140,8 @@ export default class MakeSign extends Component {
           <div>
             <input id="preschool" checked={this.state.target === "p"} value="p" name="target" type="radio" onChange={this.handleOptionChange}/>
             <label for="preschool"> שלט לגן</label>&nbsp;&nbsp;&nbsp;
+            <input id="preschools" checked={this.state.target === "q"} value="q" name="target" type="radio" onChange={this.handleOptionChange}/>
+            <label for="preschools"> שלט למתחם גנים</label>&nbsp;&nbsp;&nbsp;
             <input id="classroom" checked={this.state.target === "c"} value="c" name="target" type="radio" onChange={this.handleOptionChange}/>
             <label for="classroom"> שלט לכיתה</label>&nbsp;&nbsp;&nbsp;
             <input id="school" checked={this.state.target === "s"} value="s" name="target" type="radio" onChange={this.handleOptionChange}/>
