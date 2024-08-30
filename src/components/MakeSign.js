@@ -32,7 +32,7 @@ export default class MakeSign extends Component {
   }
 
   state = {
-    target: "p",
+    target: "d",
     nuts: false,
     other: false
   }
@@ -48,6 +48,9 @@ export default class MakeSign extends Component {
     doc.setFontSize(48);
     let type = "";
     switch (data.get("target")) {
+      case "d":
+        type = "מעון";
+        break;
       case "p":
         type = "גן";
         break;
@@ -138,6 +141,8 @@ export default class MakeSign extends Component {
       <div className={`MakeSign ${className}`}>
         <form onSubmit={this.handleSubmit}>
           <div>
+            <input id="daycare" checked={this.state.target === "d"} value="d" name="target" type="radio" onChange={this.handleOptionChange}/>
+            <label for="daycare"> שלט למעון</label>&nbsp;&nbsp;&nbsp;
             <input id="preschool" checked={this.state.target === "p"} value="p" name="target" type="radio" onChange={this.handleOptionChange}/>
             <label for="preschool"> שלט לגן</label>&nbsp;&nbsp;&nbsp;
             <input id="classroom" checked={this.state.target === "c"} value="c" name="target" type="radio" onChange={this.handleOptionChange}/>
