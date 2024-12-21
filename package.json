@@ -4,7 +4,7 @@
   "description": "An opinionated starter project for creating lightning-fast websites with Gatsby v2 and Netlify CMS v2",
   "version": "2.0.0",
   "engines": {
-    "node": "16"
+    "node": "22"
   },
   "repository": {
     "type": "git",
@@ -43,7 +43,7 @@
     "modern-normalize": "^0.5.0",
     "netlify-cms-app": "^2.9.7",
     "netlify-cms-media-library-uploadcare": "^0.5.5",
-    "node-sass": "^7.0.1",
+    "node-sass": "^9.0.0",
     "postcss-preset-env": "^6.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
@@ -61,19 +61,20 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "del-cli .cache public && gatsby develop",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "start": "del-cli .cache public && NODE_OPTIONS=--openssl-legacy-provider gatsby develop",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider gatsby build",
+    "develop": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop",
     "clean": "del-cli .cache public",
-    "serve": "gatsby serve",
+    "serve": "NODE_OPTIONS=--openssl-legacy-provider gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "gatsby build",
+    "predeploy": "NODE_OPTIONS=--openssl-legacy-provider gatsby build",
     "deploy": "netlify deploy --prod"
   },
   "devDependencies": {
-    "del-cli": "^3.0.0",
-    "netlify-cli": "^16.2.0",
+    "del-cli": "^6.0.0",
+    "netlify-cli": "^17.38.1",
     "prettier": "^1.18.2"
-  }
+  },
+  "packageManager": "yarn@4.5.3+sha512.3003a14012e2987072d244c720506549c1aab73ee728208f1b2580a9fd67b92d61ba6b08fe93f6dce68fd771e3af1e59a0afa28dd242dd0940d73b95fedd4e90"
 }
