@@ -27,6 +27,7 @@ export const SinglePostTemplate = ({
       itemType="http://schema.org/BlogPosting"
     >
       <div className="container skinny">
+        {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
         <a className="SinglePost--BackButton" href="javascript:history.back()">
           <ChevronLeft /> חזרה
         </a>
@@ -64,7 +65,7 @@ export const SinglePostTemplate = ({
             </h1>
           )}
           {titleLink && (
-            <a className="SinglePost--TitleLink" href={titleLink} target="_blank">
+            <a className="SinglePost--TitleLink" href={titleLink} target="_blank" rel="noreferrer">
               <h1 className="SinglePost--Title" itemProp="title">
                 {title}
               </h1>

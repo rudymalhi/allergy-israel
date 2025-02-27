@@ -26,8 +26,7 @@ export default class FileGallery extends Component {
   }
 
   isOpen(isOpen, index) {
-    if (typeof index === 'undefined') index = 0
-    this.setState({ isOpen, index })
+    this.setState({ isOpen, index: (typeof index === 'undefined') ? 0 : index })
   }
 
   render() {
@@ -39,12 +38,14 @@ export default class FileGallery extends Component {
             <div className="FileGallery">
               {files.map((file, index) => (
                 <a
+                  key={file.title}
                   className="FileGallery--Item"
                   href={file.file}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   {file.title && <h3 class="FileGallery--ItemTitle">{file.title}</h3>}
-                  {file.thumbnail && <img class="FileGallery--ItemThumbnail" src={file.thumbnail}/>}
+                  {file.thumbnail && <img alt={file.title} class="FileGallery--ItemThumbnail" src={file.thumbnail}/>}
                   {file.description && <Marked source={file.description}/>}
                 </a>
               ))}

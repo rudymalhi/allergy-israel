@@ -23,17 +23,17 @@ module.exports = {
             // Use cacheFirst since these don't need to be revalidated (same RegExp
             // and same reason as above)
             urlPattern: /(\.js$|\.css$|static\/)/,
-            handler: `cacheFirst`
+            handler: "cacheFirst"
           },
           {
             // Add runtime caching of various other page resources
             urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
-            handler: `staleWhileRevalidate`
+            handler: "staleWhileRevalidate"
           },
           {
             // uploadcare
             urlPattern: /^https:\/\/ucarecdn.com\/[-a-zA-Z0-9@:%_\+.~#?&//=]*?\/10x\//,
-            handler: `staleWhileRevalidate`
+            handler: "staleWhileRevalidate"
           }
         ],
         skipWaiting: true,
@@ -41,7 +41,7 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-plugin-manifest",
       options: {
         name: 'עמותת יה“ל',
         short_name: 'עמותת יה“ל',
@@ -95,15 +95,15 @@ module.exports = {
               includedSelector: '.Content--Image'
             }
           },
-          `gatsby-remark-responsive-iframe`,
-          `gatsby-remark-external-links`
+          "gatsby-remark-responsive-iframe",
+          "gatsby-remark-external-links"
         ]
       }
     },
 
     // css (replace with gatsby-plugin-sass for v2)
     {
-      resolve: `gatsby-plugin-sass`,
+      resolve: "gatsby-plugin-sass",
       options: {
         postCssPlugins: [
           postcssPresetEnv({
@@ -113,10 +113,10 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-postcss`,
+      resolve: "gatsby-plugin-postcss",
       options: {
         postCssPlugins: [
-          require(`postcss-preset-env`)({
+          require("postcss-preset-env")({
             browsers: '> 0.5%, last 2 versions, ie 11'
           })
         ]
@@ -145,7 +145,7 @@ module.exports = {
         enableIdentityWidget: true
       }
     },
-    `gatsby-plugin-catch-links`,
+    "gatsby-plugin-catch-links",
     'gatsby-plugin-netlify' // make sure to keep it last in the array
   ]
 }
